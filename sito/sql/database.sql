@@ -1,0 +1,44 @@
+drop database if exists teatro;
+create database if not exists teatro;
+
+use teatro;
+
+drop table if exists visiona;
+drop table if exists evento;
+drop table if exists cittadino;
+
+create table cittadino(
+  id int auto_increment primary key,
+  nome char(30) not null,
+  cognome char(30) not null,
+  telefono varchar(11) not null,
+  mail varchar(30) not null,
+  password_account varchar(16) not null,
+  via char(100) not null,
+  citta char(100) not null
+) engine=INNODB;
+
+create table evento(
+  codice_evento int auto_increment primary key,
+  nome varchar(30) not null,
+  tipo char(30) not null,
+  data_evento date not null,
+  path_to_video varchar(200) not null
+) engine=INNODB;
+
+create table visiona(
+  codice_visione int auto_increment primary key,
+  id int not null,
+  codice_evento int not null,
+  FOREIGN KEY (id) REFERENCES cittadino(id),
+  FOREIGN KEY (codice_evento) REFERENCES evento(codice_evento)
+) engine=INNODB;
+
+insert into evento(nome, tipo, data_evento, path_to_video) VALUES
+('Hamilton', 'musical', '2023-06-25', './video/hamilton.mp4'),
+('Hamilton', 'musical', '2023-06-30', './video/hamilton.mp4'),
+('Enrico IV', 'dramma', '2023-06-26', './video/enricoiv.mp4'),
+('Romeo E Giulietta', 'tragedia', '2023-06-27', './video/romeogiulietta.mp4');
+
+
+
