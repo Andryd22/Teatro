@@ -17,7 +17,7 @@
 </head>
 
  <?php
-    // Attiva il controllo sessione in questa pagina
+    // Attiva il controllo sessione in questa pagina 
     session_start();
 
     // Controlla se siamo in sessione
@@ -26,9 +26,31 @@
 		header($salto, true, 303);
 		die();
     }
+    // lalalalalalalalal
  ?>   
 
 <body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <nav class="navbar navbar-expand-md">
         <a class="navbar-brand" href="index.html"><img src="img/logo.png" /></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
