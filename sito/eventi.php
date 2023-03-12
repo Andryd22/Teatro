@@ -20,8 +20,14 @@
     // Controlla se siamo in sessione
     session_start();
 
-    if (isset($_SESSION['user'])) {
+    if (isset($_SESSION['user']) && $isAdmin) {
         $salto='Location: ./admin.php';       
+		header($salto, true, 303);
+		die();
+    }
+
+    if (isset($_SESSION['user']) && !$isAdmin) { //da provare
+        $salto='Location: ./eventi.php';       
 		header($salto, true, 303);
 		die();
     }
@@ -61,13 +67,13 @@
 
             case -1:
                 $titolo="Accesso Eventi";
-                $salto="sceltachk.php";
+                $salto="/sito/sceltachk.php";
                 $bottone="Login Eventi";
                 break;
 
             case 0:
                 $titolo="Errore durante il login. Ritenta";
-                $salto="sceltachk.php";
+                $salto="/sito/sceltachk.php";
                 $bottone="Login Eventi";
                 break;          
         }

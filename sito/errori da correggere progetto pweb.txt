@@ -1,0 +1,21 @@
+errori da correggere progetto pweb:
+- rip bootstrap e splittare css (si possono togliere le animazioni e finito)
+- aggiornare/aggiungere spattacoli 
+- inserire controllo password (manca carattere maiuscolo e numero) (forse?)
+- parte in alta del sito ridondante (?) 
+- se pwd sbagliata esito=0 non va (buggettino)
+
+da implementare:
+- parte admin che può inserire nuovi spettacoli tramite caricamento di file.mp4 nella directory (quasi)
+- query sql che metta il nuovo spettacolo nel database
+- sse root -> admin.php (manca il controllo se root o utente normale al login, deve portarlo in due file diversi)
+- ALTRA ROBA DA AGGIUNGERE: (non tutto -> mail)
+	- visualizzazioni di uno spettacolo
+	- like/dislike
+	- spettacoli di tendenza in un'altra pagina
+	- cronologia di visualizzazioni dell'utente
+	
+
+
+https://github.com/Andryd22/Teatro.git
+

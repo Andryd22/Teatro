@@ -15,7 +15,8 @@ create table cittadino(
   mail varchar(30) not null,
   password_account varchar(16) not null,
   via char(100) not null,
-  citta char(100) not null
+  citta char(100) not null,
+  isAdmin TINYINT(1) default 0
 ) engine=INNODB;
 
 create table evento(
@@ -39,6 +40,9 @@ insert into evento(nome, tipo, data_evento, path_to_video) VALUES
 ('Hamilton', 'musical', '2023-06-30', './video/hamilton.mp4'),
 ('Enrico IV', 'dramma', '2023-06-26', './video/enricoiv.mp4'),
 ('Romeo E Giulietta', 'tragedia', '2023-06-27', './video/romeogiulietta.mp4');
+
+insert into cittadino(nome, cognome, telefono, mail, password_account, via, citta, isAdmin) VALUES
+("Teatro Maggio", "Fiorentino", 0552779309, "root@gmail.com", "root", "Piazza Vittorio Gui 1", "Firenze", 1);
 
 
 
