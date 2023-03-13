@@ -20,17 +20,13 @@
     // Controlla se siamo in sessione
     session_start();
 
-    if (isset($_SESSION['user']) && $isAdmin) {
+    if (isset($_SESSION['user']) && isset($_SESSION['admin'])){
         $salto='Location: ./admin.php';       
 		header($salto, true, 303);
 		die();
     }
 
-    if (isset($_SESSION['user']) && !$isAdmin) { //da provare
-        $salto='Location: ./eventi.php';       
-		header($salto, true, 303);
-		die();
-    }
+    
  ?>   
 
 <body>
@@ -82,7 +78,7 @@
     <div class="container">
         <div class="row">
             <div class="box-largo ">
-                <div id="board " class="box-largo">
+                <div id="board " class="box-largo"> <!-- come fa a anda sulla scelta -->
                     <form action="<?php echo "$salto" ?>" method="post" id="register" class="form-horizontal text-center" role="form">
                         <h1>
                             <?php echo "$titolo" ?>
