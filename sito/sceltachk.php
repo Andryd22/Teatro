@@ -16,20 +16,45 @@
 		$result=mysqli_query($connessionesql,$query);
         
 		$isPasswordCorrect=false;
+
         while ($campi = mysqli_fetch_row($result)) {				
 			
-			// Da fixare funzione
-			//$isPasswordCorrect = password_verify($password, $campi[0]);		
-			echo $password;
+			echo "</br>";			
+			echo $email;
+			echo "</br>";
 			echo $campi[0];
-			echo $isAdmin;
+			echo "</br>";
+			echo $campi[1];
+			echo "</br>";
+
+			
+			// Da fixare funzione
+			$isPasswordCorrect = password_verify(trim($password), trim($campi[0]));		
+			
 			$isAdmin = false;
 			if ($campi[1] == 1) {
 				$isAdmin = true;
 			}
-			
-			$isPasswordCorrect =true; // non entra proprio
+			//$isPasswordCorrect = 1; // non entra proprio
 						
+			echo "</br>isa:";
+			if ($isAdmin == true) {
+				echo "1";
+			} else {
+				echo "0";
+			}
+
+			echo "</br>isp:";
+
+			if ($isPasswordCorrect == true) {
+				echo "1";
+			} else {
+				echo "0";
+			}
+			echo "</br>";
+
+			//$a=1/0;
+			
 		}
 
 		// Fai partire la sessione 
@@ -44,8 +69,8 @@
 		if($isPasswordCorrect && $isAdmin) { 			// admin ok
 			$salto='Location: ./admin.php';
 	    } 
-		elseif($isPasswordCorrect && !$isAdmin) { 		// non trova utente normale ma va sempre esito=0
-			$salto='Location: ./eventi.php';
+		elseif($isPasswordCorrect && (!$isAdmin)) { 		
+			$salto='Location: ./scelta.php';
 		} 
 		else {
 			$salto='Location: ./eventi.php?esito=0';

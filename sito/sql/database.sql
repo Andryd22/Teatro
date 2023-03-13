@@ -13,7 +13,7 @@ create table cittadino(
   cognome char(30) not null,
   telefono varchar(11) not null,
   mail varchar(30) not null,
-  password_account varchar(16) not null,
+  password_account varchar(1000) not null,
   via char(100) not null,
   citta char(100) not null,
   isAdmin TINYINT(1) default 0

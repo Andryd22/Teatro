@@ -46,7 +46,7 @@
                     echo "Logged as " . $_SESSION['user'] . "";
                 ?>  
             </a>
-            <a class="nav-button" href="logout.php"> Logout</a>
+            <a class="nav-button" href="logout.php">Logout</a>
         </div>
     </nav>
     

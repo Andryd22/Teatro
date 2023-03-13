@@ -16,18 +16,6 @@
 
 </head>
 
-<?php
-    // Controlla se siamo in sessione
-    session_start();
-
-    if (isset($_SESSION['user']) && isset($_SESSION['admin'])){
-        $salto='Location: ./admin.php';       
-		header($salto, true, 303);
-		die();
-    }
-
-    
- ?>   
 
 <body>
     <nav class="navbar navbar-expand-md">
