@@ -16,29 +16,34 @@
 
 </head>
 <?php   
-/* 
+    // Connessione al db
+	require __DIR__ . "/php/connessione.php";
+    
+    // Recupero parametri per il video
+    $nomefile=addslashes($_REQUEST['nome']);
     $data=addslashes($_REQUEST['data_evento']);
-    $nome=addslashes($_REQUEST['nome']);
-    echo $data; echo $nome;
-    $query = "SELECT 1 FROM evento WHERE data_evento='" . $data . "' AND  nome='" . $nome . "';";
-    $scelta=0;
-    if($query==1) $scelta=1;
-    echo $scelta;
-    echo $query;
-*/ 
-//da provare codice sopra, non può funzionare non essendo presente nel db ancora
-    //$data= __DIR__ . "/video/" . $_FILES["file"]["data_evento"];
-    //echo $data;
-    echo "</br></br></br>";
-    if (file_exists(__DIR__ . "/video/" . $_FILES["file"]["name"]) && $scelta==1 ) //&& (__DIR__ . "/video/" . $_FILES["file"]["data_evento"])==date("Y-m-d")
-    {
-    echo $_FILES["file"]["name"] . "esiste già in questa data";
+    $tipo=addslashes($_REQUEST['tipo']);
+    $path_to_video= "./video/" . $nomefile . ".mp4";
+    
+    
+    $query = "INSERT INTO evento(nome,tipo,data_evento,path_to_video) VALUES ('$nomefile','$tipo','$data','$path_to_video')";
+   
+    $query2 = "SELECT 1 FROM evento WHERE data_evento='" . $data . "' AND  nome='" . $nomefile . "';";
+    
+    $giapresentestessadata=0;
+    if($query2==1) $giapresentestessadata=1;
+    echo "presente: " . $giapresentestessadata;
+
+    $result=mysqli_query($connessionesql,$query);
+
+    echo "</br></br>";
+    if (file_exists(__DIR__ . "/video/" . $_FILES["file"]["name"]) && $giapresentestessadata ){
+        echo $_FILES["file"]["name"] . "esiste già in questa data";
     }
-    else if (!file_exists(__DIR__ . "/video/" . $_FILES["file"]["name"]))
-    {
-    move_uploaded_file($_FILES["file"]["tmp_name"], __DIR__ . "/video/" . $_FILES["file"]["name"]);
-    echo "Inserito in: " . __DIR__ . "/video/" . $_FILES["file"]["name"];
-    }
-    else echo "Stampa qualcosa perfavore";
+    else if (!file_exists(__DIR__ . "/video/" . $_FILES["file"]["name"])){
+        move_uploaded_file($_FILES["file"]["tmp_name"], __DIR__ . "/video/" . $_FILES["file"]["name"]);
+        echo "Inserito in: " . __DIR__ . "/video/" . $_FILES["file"]["name"];
+    } 
+    else echo "non sarebbe dovuto entrare qua";
 ?>
 </html>

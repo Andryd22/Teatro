@@ -8,7 +8,7 @@
 		// Connessione al db
 		require __DIR__ . "/php/connessione.php";
 			
-		// Recupero parametri
+		// Recupero parametri per il cittadino
         $nome=addslashes($_REQUEST['nome']);
         $cognome=addslashes($_REQUEST['cognome']);
 
@@ -23,8 +23,7 @@
 		$pwdhash=password_hash($pwd,PASSWORD_DEFAULT);
 	
         $telefono=addslashes($_REQUEST['telefono']);
-		$mail=addslashes($_REQUEST['email']);
-	       
+		$mail=addslashes($_REQUEST['email']);	       
         $indirizzo=addslashes($_REQUEST['indirizzo']);
         $citta=addslashes($_REQUEST['citta']);
        
