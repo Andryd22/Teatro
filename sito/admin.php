@@ -26,7 +26,7 @@
 		header($salto, true, 303);
 		die();
     }
-    // lalalalalalalalal
+
  ?>   
 
 <body>

@@ -15,13 +15,22 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
 </head>
-<?php    
-    
-    var_dump($_POST);
-    var_dump($_FILES);
-    $data= __DIR__ . "/video/" . $_FILES["file"]["data_evento"];
-    echo $data;
-    if (file_exists(__DIR__ . "/video/" . $_FILES["file"]["name"]) ) //&& (__DIR__ . "/video/" . $_FILES["file"]["data_evento"])==date("Y-m-d")
+<?php   
+/* 
+    $data=addslashes($_REQUEST['data_evento']);
+    $nome=addslashes($_REQUEST['nome']);
+    echo $data; echo $nome;
+    $query = "SELECT 1 FROM evento WHERE data_evento='" . $data . "' AND  nome='" . $nome . "';";
+    $scelta=0;
+    if($query==1) $scelta=1;
+    echo $scelta;
+    echo $query;
+*/ 
+//da provare codice sopra, non può funzionare non essendo presente nel db ancora
+    //$data= __DIR__ . "/video/" . $_FILES["file"]["data_evento"];
+    //echo $data;
+    echo "</br></br></br>";
+    if (file_exists(__DIR__ . "/video/" . $_FILES["file"]["name"]) && $scelta==1 ) //&& (__DIR__ . "/video/" . $_FILES["file"]["data_evento"])==date("Y-m-d")
     {
     echo $_FILES["file"]["name"] . "esiste già in questa data";
     }

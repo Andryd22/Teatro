@@ -16,44 +16,16 @@
 		$result=mysqli_query($connessionesql,$query);
         
 		$isPasswordCorrect=false;
-
+		$isAdmin = false;
+		
         while ($campi = mysqli_fetch_row($result)) {				
 			
-			echo "</br>";			
-			echo "mail: " . $email;
-			echo "</br>";
-			echo "pwd: " . $campi[0];
-			echo "</br>";
-			echo "isadmin: " . $campi[1];
-			echo "</br>";
+			$isPasswordCorrect = password_verify($password, rtrim($campi[0]));		
 			
-			
-			//$isPasswordCorrect = password_verify($password, $campi[0]);		
-			$isPasswordCorrect = 1;
-			$isAdmin = false;
 			if ($campi[1] == 1) {
 				$isAdmin = true;
 			}
-			 
-						
-			echo "</br>isadmin:";
-			if ($isAdmin == true) {
-				echo "1";
-			} else {
-				echo "0";
-			}
-
-			echo "</br>ispwdcorrect:";
-
-			if ($isPasswordCorrect == true) {
-				echo "1";
-			} else {
-				echo "0";
-			}
-			echo "</br>";
-
-			$a=1/0;
-			
+			 		
 		}
 
 		// Fai partire la sessione 
@@ -64,7 +36,7 @@
 
 		// Salva se è admin in sessione
 		$_SESSION['admin'] = $isAdmin;
-		
+		//$a=1/0;
 		if($isPasswordCorrect && $isAdmin) { 
 			$salto='Location: ./admin.php';
 	    } 

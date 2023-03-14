@@ -11,7 +11,7 @@ create table cittadino(
   id int auto_increment primary key,
   nome char(30) not null,
   cognome char(30) not null,
-  telefono varchar(11) not null,
+  telefono varchar(10) not null,
   mail varchar(30) not null,
   password_account varchar(1000) not null,
   via char(100) not null,
@@ -42,7 +42,7 @@ insert into evento(nome, tipo, data_evento, path_to_video) VALUES
 ('Romeo E Giulietta', 'tragedia', '2023-06-27', './video/romeogiulietta.mp4');
 
 insert into cittadino(nome, cognome, telefono, mail, password_account, via, citta, isAdmin) VALUES
-("Teatro Maggio", "Fiorentino", 0552779309, "root@gmail.com", "root", "Piazza Vittorio Gui 1", "Firenze", 1);
+("Teatro Maggio", "Fiorentino", 0552779309, "root@gmail.com", "$2y$10$fomVNifsivjtOaORTnitkOltKD3LdYs7W4E7CbLNxfqZA65wRT7MO", "Piazza Vittorio Gui 1", "Firenze", 1);
 
 
 
