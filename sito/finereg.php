@@ -29,10 +29,7 @@
         $citta=addslashes($_REQUEST['citta']);
        
 		// Esegue la insert per la tabella Cittadino
-        $query="INSERT INTO Cittadino(nome,cognome,telefono,mail,password_account,via,citta) VALUES ('$nome','$cognome','$telefono','$mail','$pwdhash','$indirizzo','$citta');"; 
-
-		echo $query;
-$a=1/0;
+        $query="INSERT INTO Cittadino(nome,cognome,telefono,mail,password_account,via,citta) VALUES ('$nome','$cognome','$telefono','$mail','$pwdhash','$indirizzo','$citta');";
 
 		if(!mysqli_query($connessionesql,$query)){		
             $salto='Location: ./register.php?esito=' . $esito;

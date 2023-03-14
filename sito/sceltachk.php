@@ -12,7 +12,7 @@
 		
 		// Esegue la insert per la tabella Cittadino
         $query="SELECT password_account, isAdmin FROM Cittadino WHERE mail='" . $email . "' LIMIT 1;";     	  
-		echo $query;
+		echo "query: " . $query;
 		$result=mysqli_query($connessionesql,$query);
         
 		$isPasswordCorrect=false;
@@ -20,31 +20,30 @@
         while ($campi = mysqli_fetch_row($result)) {				
 			
 			echo "</br>";			
-			echo $email;
+			echo "mail: " . $email;
 			echo "</br>";
-			echo $campi[0];
+			echo "pwd: " . $campi[0];
 			echo "</br>";
-			echo $campi[1];
+			echo "isadmin: " . $campi[1];
 			echo "</br>";
-
 			
-			// Da fixare funzione
-			$isPasswordCorrect = password_verify(trim($password), trim($campi[0]));		
 			
+			//$isPasswordCorrect = password_verify($password, $campi[0]);		
+			$isPasswordCorrect = 1;
 			$isAdmin = false;
 			if ($campi[1] == 1) {
 				$isAdmin = true;
 			}
-			//$isPasswordCorrect = 1; // non entra proprio
+			 
 						
-			echo "</br>isa:";
+			echo "</br>isadmin:";
 			if ($isAdmin == true) {
 				echo "1";
 			} else {
 				echo "0";
 			}
 
-			echo "</br>isp:";
+			echo "</br>ispwdcorrect:";
 
 			if ($isPasswordCorrect == true) {
 				echo "1";
@@ -53,7 +52,7 @@
 			}
 			echo "</br>";
 
-			//$a=1/0;
+			$a=1/0;
 			
 		}
 
@@ -66,7 +65,7 @@
 		// Salva se è admin in sessione
 		$_SESSION['admin'] = $isAdmin;
 		
-		if($isPasswordCorrect && $isAdmin) { 			// admin ok
+		if($isPasswordCorrect && $isAdmin) { 
 			$salto='Location: ./admin.php';
 	    } 
 		elseif($isPasswordCorrect && (!$isAdmin)) { 		

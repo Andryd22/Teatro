@@ -66,7 +66,7 @@
     <div class="container">
         <div class="row">
             <div class="box-largo ">
-                <div id="board " class="box-largo"> <!-- come fa a anda sulla scelta -->
+                <div id="board " class="box-largo"> 
                     <form action="<?php echo "$salto" ?>" method="post" id="register" class="form-horizontal text-center" role="form">
                         <h1>
                             <?php echo "$titolo" ?>
