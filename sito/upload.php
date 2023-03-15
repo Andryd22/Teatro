@@ -26,24 +26,35 @@
     $path_to_video= "./video/" . $nomefile . ".mp4";
     
     
-    $query = "INSERT INTO evento(nome,tipo,data_evento,path_to_video) VALUES ('$nomefile','$tipo','$data','$path_to_video')";
-   
-    $query2 = "SELECT 1 FROM evento WHERE data_evento='" . $data . "' AND  nome='" . $nomefile . "';";
     
-    $giapresentestessadata=0;
-    if($query2==1) $giapresentestessadata=1;
-    echo "presente: " . $giapresentestessadata;
+    $query2 = "SELECT 1 FROM evento WHERE data_evento='" . $data . "' AND  nome='" . $nomefile . "';";
+    $result2='';
+    $result2=mysqli_query($connessionesql,$query2);
+    
+    //controllo se result2 è vuoto o ha un result
+    $num=mysqli_num_rows($result2);
+    echo "</br> num: " . $num;
+    if ($num!=0)  $giapresente=1;
+    else $giapresente=0;
 
-    $result=mysqli_query($connessionesql,$query);
+    // SELECT 1 AS ok FROM evento WHERE nome='Otello' AND data_evento='2023-07-20';
+    echo "</br>giapresente: " . $giapresente . "</br>";
 
-    echo "</br></br>";
-    if (file_exists(__DIR__ . "/video/" . $_FILES["file"]["name"]) && $giapresentestessadata ){
-        echo $_FILES["file"]["name"] . "esiste già in questa data";
+    // file già presente stessa data 
+    if (file_exists(__DIR__ . "/video/" . $_FILES["file"]["name"]) && $giapresente==1 ){ 
+        echo $_FILES["file"]["name"] . " esiste già in questa data"; //PERCHE ENTRI QUA INFAME
     }
-    else if (!file_exists(__DIR__ . "/video/" . $_FILES["file"]["name"])){
+
+    // file non presente oppure file già presente ma in una data diversa
+    else if ((!file_exists(__DIR__ . "/video/" . $_FILES["file"]["name"])) || (file_exists(__DIR__ . "/video/" . $_FILES["file"]["name"]) && $giapresente==0)){
+
+        $query = "INSERT INTO evento(nome,tipo,data_evento,path_to_video) VALUES ('$nomefile','$tipo','$data','$path_to_video')";
+        $result=mysqli_query($connessionesql,$query);
+
         move_uploaded_file($_FILES["file"]["tmp_name"], __DIR__ . "/video/" . $_FILES["file"]["name"]);
         echo "Inserito in: " . __DIR__ . "/video/" . $_FILES["file"]["name"];
-    } 
-    else echo "non sarebbe dovuto entrare qua";
+    }
+    else echo "non sarebbe dovuto entrare qua"; // da togliere perchè non dovrebbe servire
+    $a=1/0;
 ?>
 </html>

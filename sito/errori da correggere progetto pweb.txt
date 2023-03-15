@@ -6,8 +6,6 @@ errori da correggere progetto pweb:
 
 
 da implementare:
-- parte admin che può inserire nuovi spettacoli tramite caricamento di file.mp4 nella directory (quasi)
-- query sql che metta il nuovo spettacolo nel database
 - ALTRA ROBA DA AGGIUNGERE: (non tutto -> mandare mail)
 	- visualizzazioni di uno spettacolo
 	- like/dislike

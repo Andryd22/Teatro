@@ -42,7 +42,7 @@ insert into evento(nome, tipo, data_evento, path_to_video) VALUES
 ('Romeo E Giulietta', 'tragedia', '2023-06-27', './video/romeogiulietta.mp4');
 
 insert into cittadino(nome, cognome, telefono, mail, password_account, via, citta, isAdmin) VALUES
-("Teatro Maggio", "Fiorentino", 0552779309, "root@gmail.com", "$2y$10$fomVNifsivjtOaORTnitkOltKD3LdYs7W4E7CbLNxfqZA65wRT7MO", "Piazza Vittorio Gui 1", "Firenze", 1);
-
+("Teatro Maggio", "Fiorentino", 0552779309, "root@gmail.com", "$2y$10$fomVNifsivjtOaORTnitkOltKD3LdYs7W4E7CbLNxfqZA65wRT7MO", "Piazza Vittorio Gui 1", "Firenze", 1),
+("Andrea", "Doni", 342778129, "andry2d2@gmail.com", "$2y$10$ta4aWRfugS9v6f5AAoigEOd97qohaoFXV.j4km9VTspOz6yPX5pXm", "via dell'acquerata", "stabbia", 0);
 
 
