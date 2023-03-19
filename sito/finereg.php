@@ -19,7 +19,8 @@
 			$salto='Location: /register.php?esito=' . $esito;
 			header($salto, true, 303);
 			die();
-		}		
+		}	
+			
 		$pwdhash=password_hash($pwd,PASSWORD_DEFAULT);
 	
         $telefono=addslashes($_REQUEST['telefono']);

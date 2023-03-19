@@ -1,7 +1,6 @@
 errori da correggere progetto pweb:
-- rip bootstrap e splittare css (si possono togliere le animazioni e finito)
-- aggiornare/aggiungere spattacoli 
-- inserire controllo password in js (manca carattere maiuscolo e numero) (forse?)
+- rip bootstrap e splittare css (si possono togliere le animazioni) 
+- inserire controllo password in js 
 - parte in alta del sito ridondante (?) 
 - connessione.txt non va messo "root@gmail.com" "root" ??
 
