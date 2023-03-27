@@ -62,7 +62,7 @@
         }
     ?>
 
-    <div class="container">
+    <div class="container2">
         <div class="row">
             <div class="box-largo ">
                 <div id="board " class="box-largo">                   
