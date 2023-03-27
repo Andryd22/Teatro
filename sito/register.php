@@ -62,7 +62,7 @@
         }
     ?>
 
-    <div class="container">
+    <div class="container2">
         <div class="row">
             <div class="box-largo ">
                 <div id="board " class="box-largo">                   
@@ -82,13 +82,13 @@
                             <p><br /></p>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <input type="text" name="email" class="form-control" placeholder="Email (Nickname per il Login)" required>
+                                    <input type="text" name="email" class="form-control" placeholder="Email" required>
                                 </div>
                                 <div class="col-md-3">
-                                    <input type="password" name="password" class="form-control" placeholder="Password" required>
+                                    <input type="password" name="password" class="form-control" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
                                 </div>
                                 <div class="col-md-3">
-                                    <input type="password" name="password2" class="form-control" placeholder="Ripeti Password" required>
+                                    <input type="password" name="password2" class="form-control" placeholder="Ripeti Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
                                 </div>
                             </div>
                             <p><br /></p>
@@ -103,7 +103,7 @@
                                     <input type="text" name="citta" class="form-control" placeholder="Città" required>
                                 </div>                         
                             </div>
-                            <p><br /></p>
+                            <p><br />
                             
 
                             <div class="row">
@@ -113,8 +113,21 @@
                                     <br>                                    
                                 </div>
                             </div>
-                           
-                            <p><br /></p>
+                            <br/>
+                            <div class="row">
+                                <div class="box-largo">  
+                                    <div id="pwdcheck">
+                                        
+                                        <p>La password deve contenere almeno:</p>
+                                        <p id="minuscolo" class="invalid"><b>-</b> Una lettera <b>minuscola</b> </p>
+                                        <p id="maiuscolo" class="invalid"><b>-</b> Una lettera <b>maiuscola</b> </p>
+                                        <p id="numero" class="invalid"><b>-</b> Un <b>numero</b> </p>
+                                        <p id="carspeciale" class="invalid"><b>-</b> Un <b>carattere speciale</b></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br />
 
                             <div class="form-group">
                                 <button type="submit" class="button contact-submit">Invia Registrazione</button>                                   
