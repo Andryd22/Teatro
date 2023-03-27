@@ -9,7 +9,7 @@ da implementare:
 - ALTRA ROBA DA AGGIUNGERE: (non tutto -> mandare mail)
 	- visualizzazioni di uno spettacolo
 	- like/dislike
-	- spettacoli di tendenza in un'altra pagina
+	- spettacoli di tendenza in un'altra pagina (peggiore)
 	- cronologia di visualizzazioni dell'utente
 	
 
