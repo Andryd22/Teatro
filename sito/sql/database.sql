@@ -24,7 +24,10 @@ create table evento(
   nome varchar(30) not null,
   tipo char(30) not null,
   data_evento date not null,
-  path_to_video varchar(200) not null
+  path_to_video varchar(200) not null,
+  likes int not null default 0,
+  dislike int not null default 0,
+  views int not null default 0
 ) engine=INNODB;
 
 create table visiona(

@@ -74,19 +74,50 @@
            $path_to_video=$campi[0];
         }
 
-        /*echo "<video width='100%' controls>";
-        echo "<source src='$path_to_video' type='video/mp4'>";
-        echo "</video>";
-        echo ("<video><source src='$path_to_video' type='video/mp4'></video>");
-        echo '<iframe width="100%" src="' . $path_to_video . '"> </iframe>'*/
-
     ?>
 
     <video width="100%" controls>
       <source src="<?php echo $path_to_video; ?>">
         
     </video>
+      
+    <?php 
+        $query21="SELECT likes FROM evento WHERE codice_evento=" . $disponibilita;
+        $result2=mysqli_query($connessionesql,$query21);
+        $like=mysqli_fetch_row($result2);
+
+        $query22="SELECT dislike FROM evento WHERE codice_evento=" . $disponibilita;
+        $result2=mysqli_query($connessionesql,$query22);
+        $dislike=mysqli_fetch_row($result2);
         
+    ?>
+
+    <nav class="navbar navbar-expand-md">
+        <button class="nav-button" onclick=
+                                            <?php 
+                                                $query3="UPDATE evento SET likes=likes+1 WHERE codice_evento=" . $disponibilita;
+                                                $result3=mysqli_query($connessionesql,$query3);
+                                            ?> 
+                                            window.location.reload();
+                                            > Like: <?php echo $like[0] ?>
+            
+        </button>
+
+    </nav>
+
+    <nav class="navbar navbar-expand-md">
+        <button class="nav-button" onclick=
+                                            <?php 
+                                                $query4="UPDATE evento SET dislike=dislike+1 WHERE codice_evento=" . $disponibilita;
+                                                $result4=mysqli_query($connessionesql,$query3);
+                                            ?> 
+                                            window.location.reload();
+                                            > Dislike: <?php echo $dislike[0] ?>
+            
+        </button>
+
+    </nav>
+
     <footer class="footer">
         <div class="container">
             <div class="row">
