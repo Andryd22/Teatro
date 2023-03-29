@@ -83,15 +83,15 @@
       
     <?php 
         $query21="SELECT likes FROM evento WHERE codice_evento=" . $disponibilita;
-        $result2=mysqli_query($connessionesql,$query21);
-        $like=mysqli_fetch_row($result2);
+        $result21=mysqli_query($connessionesql,$query21);
+        $like=mysqli_fetch_row($result21);
 
         $query22="SELECT dislike FROM evento WHERE codice_evento=" . $disponibilita;
-        $result2=mysqli_query($connessionesql,$query22);
-        $dislike=mysqli_fetch_row($result2);
+        $result22=mysqli_query($connessionesql,$query22);
+        $dislike=mysqli_fetch_row($result22);
         
     ?>
-
+    
     <nav class="navbar navbar-expand-md">
         <button class="nav-button" onclick=
                                             <?php 
@@ -109,7 +109,7 @@
         <button class="nav-button" onclick=
                                             <?php 
                                                 $query4="UPDATE evento SET dislike=dislike+1 WHERE codice_evento=" . $disponibilita;
-                                                $result4=mysqli_query($connessionesql,$query3);
+                                                $result4=mysqli_query($connessionesql,$query4);
                                             ?> 
                                             window.location.reload();
                                             > Dislike: <?php echo $dislike[0] ?>
@@ -118,6 +118,10 @@
 
     </nav>
 
+    <nav class="collaplse navbar-collapse" align="right">
+        <button class="nav-button"> prova </button>
+    </nav>
+<!--
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -127,6 +131,6 @@
             </div>
         </div>
     </footer>
-    
+    -->
 </body>
 </html>
