@@ -58,6 +58,19 @@
     </nav>
 
     <?php
+        // Legge la var passata e fa l'update del like/dislike
+
+        $quale = 0; //$_GET['incrementaQuale'];
+
+        if ($quale == 0) {
+            $query3="UPDATE evento SET likes=likes+1 WHERE codice_evento=" . $disponibilita;
+        } else {
+            $query3="UPDATE evento SET dislike=dislike+1 WHERE codice_evento=" . $disponibilita;
+        }
+                                              
+        $result3=mysqli_query($connessionesql,$query3);            
+
+        // Legge la disponibilità
 
         $disponibilita=-1;
         if(isset($_REQUEST["disponibilita"])){
@@ -82,37 +95,21 @@
     </video>
       
     <?php 
-        $query21="SELECT likes FROM evento WHERE codice_evento=" . $disponibilita;
+        $query21="SELECT likes, dislike FROM evento WHERE codice_evento=" . $disponibilita;
         $result21=mysqli_query($connessionesql,$query21);
-        $like=mysqli_fetch_row($result21);
-
-        $query22="SELECT dislike FROM evento WHERE codice_evento=" . $disponibilita;
-        $result22=mysqli_query($connessionesql,$query22);
-        $dislike=mysqli_fetch_row($result22);
-        
+        $valori=mysqli_fetch_row($result21);
     ?>
     
     <nav class="navbar navbar-expand-md">
-        <button class="nav-button" onclick=
-                                            <?php 
-                                                $query3="UPDATE evento SET likes=likes+1 WHERE codice_evento=" . $disponibilita;
-                                                $result3=mysqli_query($connessionesql,$query3);
-                                            ?> 
-                                            window.location.reload();
-                                            > Like: <?php echo $like[0] ?>
+        <input type="hidden" id="incrementaQuale" name="incrementaQuale">
+        <button class="nav-button" onclick="incrementaValori(0);"> Like: <?php echo $valori[0] ?>
             
         </button>
 
     </nav>
 
     <nav class="navbar navbar-expand-md">
-        <button class="nav-button" onclick=
-                                            <?php 
-                                                $query4="UPDATE evento SET dislike=dislike+1 WHERE codice_evento=" . $disponibilita;
-                                                $result4=mysqli_query($connessionesql,$query4);
-                                            ?> 
-                                            window.location.reload();
-                                            > Dislike: <?php echo $dislike[0] ?>
+        <button class="nav-button" onclick="incrementaValori(1);"> Dislike: <?php echo $valori[1] ?>
             
         </button>
 
@@ -121,6 +118,17 @@
     <nav class="collaplse navbar-collapse" align="right">
         <button class="nav-button"> prova </button>
     </nav>
+
+<script>
+
+function incrementaValori(tipo) {
+    debugger;
+
+    $("#incrementaQuale").val(tipo);
+
+   window.location.reload();
+}
+</script>
 <!--
     <footer class="footer">
         <div class="container">
