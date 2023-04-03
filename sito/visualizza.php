@@ -53,30 +53,16 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Visualizza
+            <li class="breadcrumb-item active" aria-current="page">Visualizza</li>
         </ol>
     </nav>
 
     <?php
-        // Legge la var passata e fa l'update del like/dislike
 
-        $quale = 0; //$_GET['incrementaQuale'];
-
-        if ($quale == 0) {
-            $query3="UPDATE evento SET likes=likes+1 WHERE codice_evento=" . $disponibilita;
-        } else {
-            $query3="UPDATE evento SET dislike=dislike+1 WHERE codice_evento=" . $disponibilita;
-        }
-                                              
-        $result3=mysqli_query($connessionesql,$query3);            
-
-        // Legge la disponibilità
-
-        $disponibilita=-1;
         if(isset($_REQUEST["disponibilita"])){
             $disponibilita=$_REQUEST['disponibilita']; 
         }           
-       
+
         require  __DIR__ . "/php/connessione.php";
 
         $query="SELECT path_to_video FROM evento WHERE codice_evento=" . $disponibilita;
@@ -84,8 +70,29 @@
         $result=mysqli_query($connessionesql,$query);
 
         while ($campi = mysqli_fetch_row($result)) {
-           $path_to_video=$campi[0];
+        $path_to_video=$campi[0];
         }
+
+
+
+        
+        // Legge la var passata e fa l'update del like/dislike
+        $disponibilita=-1;
+        $quale = 0; //$_GET['incrementaQuale'];
+        echo $quale;
+        if ($quale == 0) {
+            $query3="UPDATE evento SET likes=likes+1 WHERE codice_evento=" . $disponibilita;
+        } 
+        else {
+            $query3="UPDATE evento SET dislike=dislike+1 WHERE codice_evento=" . $disponibilita;
+        }
+                                              
+        $result3=mysqli_query($connessionesql,$query3);            
+
+        echo $quale;
+
+       
+        
 
     ?>
 
@@ -95,6 +102,7 @@
     </video>
       
     <?php 
+       
         $query21="SELECT likes, dislike FROM evento WHERE codice_evento=" . $disponibilita;
         $result21=mysqli_query($connessionesql,$query21);
         $valori=mysqli_fetch_row($result21);
@@ -115,30 +123,23 @@
 
     </nav>
 
-    <nav class="collaplse navbar-collapse" align="right">
+    <!--<nav class="collaplse navbar-collapse" align="right">
         <button class="nav-button"> prova </button>
-    </nav>
+    </nav>-->
 
-<script>
 
-function incrementaValori(tipo) {
-    debugger;
+    <script>
 
-    $("#incrementaQuale").val(tipo);
+        function incrementaValori(tipo) {
+            debugger;
+            document.write (quale);
+            $("#incrementaQuale").val(tipo);
+            document.write (quale);
+        window.location.reload();
+        }
 
-   window.location.reload();
-}
-</script>
-<!--
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 h-100 text-center text-lg-left my-auto">                  
-                    <p class="small mb-4 mb-lg-0">Andrea Doni &copy; 2023. All Rights Reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    -->
+    </script>
+
+    
 </body>
 </html>

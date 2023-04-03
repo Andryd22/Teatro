@@ -1,5 +1,5 @@
 drop database if exists teatro;
-create database if not exists teatro;
+create database teatro;
 
 use teatro;
 

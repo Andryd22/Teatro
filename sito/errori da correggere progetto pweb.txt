@@ -1,15 +1,12 @@
 errori da correggere progetto pweb:
-- rip bootstrap e splittare css (si possono togliere le animazioni) 
-- inserire controllo password in js 
-- parte in alta del sito ridondante (?) 
-- connessione.txt non va messo "root@gmail.com" "root" ??
+	- rip bootstrap e splittare css (si possono togliere le animazioni) 
+
 
 da implementare:
-- ALTRA ROBA DA AGGIUNGERE: (non tutto -> mandare mail)
 	- visualizzazioni di uno spettacolo
 	- like/dislike
-	- spettacoli di tendenza in un'altra pagina (peggiore)
-	- cronologia di visualizzazioni dell'utente
+	- sezione commenti
+	- inserire controllo password in js (bug funzione)
 	
 
 
