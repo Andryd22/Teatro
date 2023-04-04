@@ -4,7 +4,6 @@ errori da correggere progetto pweb:
 
 da implementare:
 	- visualizzazioni di uno spettacolo
-	- like/dislike
 	- sezione commenti
 	- inserire controllo password in js (bug funzione)
 	

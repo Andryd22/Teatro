@@ -17,6 +17,8 @@
 </head>
 
  <?php
+    require  __DIR__ . "/php/connessione.php";
+
     // Attiva il controllo sessione in questa pagina
     session_start();
 
@@ -25,6 +27,16 @@
         $salto='Location: /eventi.php';
 		header($salto, true, 303);
 		die();
+    }
+
+    if(isset($_GET["addLike"]) && $_GET["addLike"] == 1) {
+        $query3="UPDATE evento SET likes=likes+1 WHERE codice_evento=" . $_SESSION["disponibilita"];
+        $result3=mysqli_query($connessionesql,$query3);  
+    }
+
+    if(isset($_GET["addDislike"]) && $_GET["addDislike"] == 1) {
+        $query3="UPDATE evento SET dislike=dislike+1 WHERE codice_evento=" . $_SESSION["disponibilita"];
+        $result3=mysqli_query($connessionesql,$query3);  
     }
  ?>   
 
@@ -58,42 +70,22 @@
     </nav>
 
     <?php
-
+        $disponibilita=-1;
         if(isset($_REQUEST["disponibilita"])){
             $disponibilita=$_REQUEST['disponibilita']; 
         }           
-
-        require  __DIR__ . "/php/connessione.php";
 
         $query="SELECT path_to_video FROM evento WHERE codice_evento=" . $disponibilita;
 
         $result=mysqli_query($connessionesql,$query);
 
         while ($campi = mysqli_fetch_row($result)) {
-        $path_to_video=$campi[0];
+            $path_to_video=$campi[0];
         }
 
 
-
+        $_SESSION["disponibilita"] = $disponibilita;
         
-        // Legge la var passata e fa l'update del like/dislike
-        $disponibilita=-1;
-        $quale = 0; //$_GET['incrementaQuale'];
-        echo $quale;
-        if ($quale == 0) {
-            $query3="UPDATE evento SET likes=likes+1 WHERE codice_evento=" . $disponibilita;
-        } 
-        else {
-            $query3="UPDATE evento SET dislike=dislike+1 WHERE codice_evento=" . $disponibilita;
-        }
-                                              
-        $result3=mysqli_query($connessionesql,$query3);            
-
-        echo $quale;
-
-       
-        
-
     ?>
 
     <video width="100%" controls>
@@ -106,36 +98,44 @@
         $query21="SELECT likes, dislike FROM evento WHERE codice_evento=" . $disponibilita;
         $result21=mysqli_query($connessionesql,$query21);
         $valori=mysqli_fetch_row($result21);
+        
     ?>
     
     <nav class="navbar navbar-expand-md">
         <input type="hidden" id="incrementaQuale" name="incrementaQuale">
-        <button class="nav-button" onclick="incrementaValori(0);"> Like: <?php echo $valori[0] ?>
+        <button class="nav-button" onclick="incrementaValori(1);"> Like: <?php echo $valori[0] ?>
             
         </button>
 
     </nav>
 
     <nav class="navbar navbar-expand-md">
-        <button class="nav-button" onclick="incrementaValori(1);"> Dislike: <?php echo $valori[1] ?>
+    <input type="hidden" id="incrementaQuale" name="incrementaQuale">
+        <button class="nav-button" onclick="incrementaValori(-1);"> Dislike: <?php echo $valori[1] ?>
             
         </button>
 
     </nav>
 
-    <!--<nav class="collaplse navbar-collapse" align="right">
-        <button class="nav-button"> prova </button>
-    </nav>-->
-
+   
 
     <script>
 
         function incrementaValori(tipo) {
-            debugger;
-            document.write (quale);
-            $("#incrementaQuale").val(tipo);
-            document.write (quale);
-        window.location.reload();
+            if(tipo > 0){
+                fetch("/sito/visualizza.php?addLike=1", {
+                    method: "GET"
+                }).then(() => {
+                    window.location.reload();
+                })
+            }
+            else{
+                fetch("/sito/visualizza.php?addDislike=1", {
+                    method: "GET"
+                }).then(() => {
+                    window.location.reload();
+                })
+            }
         }
 
     </script>
