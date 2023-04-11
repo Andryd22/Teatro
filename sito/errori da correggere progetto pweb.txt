@@ -5,8 +5,12 @@ errori da correggere progetto pweb:
 da implementare:
 	- visualizzazioni di uno spettacolo
 	- sezione commenti
-	- inserire controllo password in js (bug funzione)
 	
 
+bug css:
+	- immagine ripetuta più volte
+	- button attaccati
+	- no hover dei button
+	- le icon della section 2 sono di font-awesome
 
 https://github.com/Andryd22/Teatro.git

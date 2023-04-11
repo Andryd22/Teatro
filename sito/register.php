@@ -16,6 +16,7 @@
 
 </head>
 
+<script src="./checkpwd.js"></script>
 
 <body>   
     <nav class="navbar navbar-expand-md">
@@ -82,13 +83,13 @@
                             <p><br /></p>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <input type="text" name="email" class="form-control" placeholder="Email" required>
+                                    <input type="text" name="email" id="email" class="form-control" placeholder="Email" required onchange="verificaEmail(this)">
                                 </div>
                                 <div class="col-md-3">
-                                    <input type="password" name="password" class="form-control" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                                    <input type="password" name="password" id="password" class="form-control" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required onkeyup="verificaPassword(this)">
                                 </div>
                                 <div class="col-md-3">
-                                    <input type="password" name="password2" class="form-control" placeholder="Ripeti Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                                    <input type="password" name="password2" id="password2" class="form-control" placeholder="Ripeti Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
                                 </div>
                             </div>
                             <p><br /></p>
@@ -114,9 +115,18 @@
                                 </div>
                             </div>
                             <br/>
+
+                           
+
+                            <br />
+
+                            <div class="form-group">
+                                <button type="submit" class="button contact-submit">Invia Registrazione</button>                                   
+                            </div>
+                            
                             <div class="row">
                                 <div class="box-largo">  
-                                    <div id="pwdcheck">
+                                    <div id="pwdcheck2">
                                         
                                         <p>La password deve contenere almeno:</p>
                                         <p id="minuscolo" class="invalid"><b>-</b> Una lettera <b>minuscola</b> </p>
@@ -125,12 +135,6 @@
                                         <p id="carspeciale" class="invalid"><b>-</b> Un <b>carattere speciale</b></p>
                                     </div>
                                 </div>
-                            </div>
-
-                            <br />
-
-                            <div class="form-group">
-                                <button type="submit" class="button contact-submit">Invia Registrazione</button>                                   
                             </div>
 
                         </div>

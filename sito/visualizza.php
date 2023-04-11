@@ -16,7 +16,9 @@
 
 </head>
 
- <?php
+<script src="commenti.js"></script>
+
+<?php
     require  __DIR__ . "/php/connessione.php";
 
     // Attiva il controllo sessione in questa pagina
@@ -38,7 +40,7 @@
         $query3="UPDATE evento SET dislike=dislike+1 WHERE codice_evento=" . $_SESSION["disponibilita"];
         $result3=mysqli_query($connessionesql,$query3);  
     }
- ?>   
+?>   
 
 <body>   
     <nav class="navbar navbar-expand-md">
@@ -110,14 +112,11 @@
     </nav>
 
     <nav class="navbar navbar-expand-md">
-    <input type="hidden" id="incrementaQuale" name="incrementaQuale">
-        <button class="nav-button" onclick="incrementaValori(-1);"> Dislike: <?php echo $valori[1] ?>
-            
-        </button>
-
+        <input type="hidden" id="incrementaQuale" name="incrementaQuale">
+            <button class="nav-button" onclick="incrementaValori(-1);"> Dislike: <?php echo $valori[1] ?>
+                
+            </button>
     </nav>
-
-   
 
     <script>
 
@@ -140,6 +139,20 @@
 
     </script>
 
-    
+    <!-- sezione commenti -->
+    <div class="container center__display">
+        <div class="top">
+            <form>
+                <div class="form__info center__display">
+                    <input type="text" name="commento" id="commento" placeholder="inserisci un commento">
+                </div>
+                <button onclick="aggiungiComm()">
+                    Commenta
+                </button>
+            </form>
+        </div>
+    </div>
+
+
 </body>
 </html>

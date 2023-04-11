@@ -1,15 +1,16 @@
-var pwd = document.getElementById("password");
-var minuscolo = document.getElementById("minuscolo");
-var maiuscolo = document.getElementById("maiuscolo");
-var numero = document.getElementById("numero");
-var carspeciale = document.getElementById("carspeciale");
+function verificaPassword() {
 
+    var pwd = this.password;
 
-myInput.onkeyup = function() {
-    
+    var minuscolo = document.getElementById("minuscolo");
+    var maiuscolo = document.getElementById("maiuscolo");
+    var numero = document.getElementById("numero");
+    var carspeciale = document.getElementById("carspeciale");
+
+   
     // valida le lettere minuscole
     var lettereminuscole = /[a-z]/g;
-    if(myInput.value.match(lettereminuscole)) {
+    if(pwd.value.match(lettereminuscole)) {
         minuscolo.classList.remove("invalid");
         minuscolo.classList.add("valid");
     } 
@@ -20,7 +21,7 @@ myInput.onkeyup = function() {
 
     // valida le lettere maiuscole
     var letteremaiuscole = /[A-Z]/g;
-    if(myInput.value.match(letteremaiuscole)) {
+    if(pwd.value.match(letteremaiuscole)) {
         maiuscolo.classList.remove("invalid");
         maiuscolo.classList.add("valid");
     } 
@@ -31,7 +32,7 @@ myInput.onkeyup = function() {
 
     // valida i numeri
     var numeri = /[0-9]/g;
-    if(myInput.value.match(numeri)) {
+    if(pwd.value.match(numeri)) {
         numero.classList.remove("invalid");
         numero.classList.add("valid");
     } 
@@ -42,12 +43,26 @@ myInput.onkeyup = function() {
 
     // valida i caratteri speciali
     var carspec = /[?!*-.]/g;
-    if(myInput.value.match(carspec)) {
+    if(pwd.value.match(carspec)) {
         carspeciale.classList.remove("invalid");
         carspeciale.classList.add("valid");
     } 
     else {
         carspeciale.classList.remove("valid");
         carspeciale.classList.add("invalid");
+    }
+
+}
+
+function verificaEmail(input) {
+
+    var caratteri = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  
+    if(input.value.match(caratteri)) {
+        return true;
+    } 
+    else {
+        alert("Indirizzo email invalido!");   
+        return false;
     }
 }

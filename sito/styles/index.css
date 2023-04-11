@@ -9,6 +9,7 @@ body {
     text-align: left;
     background-color: #ffffff;
     display: block;
+    width: auto;
 }
 
 *, ::after, ::before {
@@ -46,7 +47,6 @@ body {
 }
 
 nav {
-    background: rgb(64, 26, 130);
     background: linear-gradient(90deg, rgba(64, 26, 130, 1) 0%, rgba(201, 0, 135, 1) 100%);
 }
 
@@ -69,10 +69,6 @@ html {
     padding: 0.5rem 1rem;
 }
 
-nav {
-    background: linear-gradient(90deg, rgba(64, 26, 130, 1) 0%, rgba(201, 0, 135, 1) 100%);
-}
-
 .navbar-brand {
     display: inline-block;
     padding-top: 0.3125rem;
@@ -81,12 +77,6 @@ nav {
     font-size: 1.25rem;
     line-height: inherit;
     white-space: nowrap;
-}
-
-a {
-    color: #007bff;
-    text-decoration: none;
-    background-color: transparent;
 }
 
 img {
@@ -111,7 +101,7 @@ img {
 
 .nav-button {
     border-radius: 2px;
-    background: #fff;
+    background: #ffffff;
     padding: 5px 10px 5px;
     color: #fb32b9;
     font-family: 'Roboto', sans-serif;
@@ -131,25 +121,14 @@ img {
     line-height: 1;
 }
 
-/*prima section*/
-section.get-started {
-    position: relative;
-    font-family: 'Roboto', sans-serif;
-    padding: 250px 0;
-    background-image: url(/sito/img/teatro.jpg);
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
+/* comune */
 
-article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+section, footer, div{
     display: block;
 }
 
 .container {
-    width: 100%;
+    max-width: 1140px;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -157,8 +136,43 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
     font-family: 'Roboto', sans-serif;
 }
 
-div{
-    display: block;
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.mx-auto {
+    margin-left: auto!important;
+    margin-right: auto!important;
+}
+
+.fancy-underline {
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, #ebb431 0%, #c90087 100%);
+    border-image-slice: 1;
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+/*prima section*/
+
+section.get-started {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    padding: 250px 0;
+    background-image: url(/sito/img/teatro.jpg);
+    background-position: center;
+ 
 }
 
 section.get-started .get-started-content h2 {
@@ -170,21 +184,21 @@ section.get-started .get-started-content h2 {
     opacity: 0.9;
 }
 
-.h2 {
-    font-size: 2rem;
-}
-
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 0.5rem;
+.h2{
     font-family: inherit;
     font-weight: 500;
     line-height: 1.2;
-    color: inherit;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h2 {
     margin-top: 0;
     margin-bottom: 0.5rem;
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
 }
 
 .browsing-button {
@@ -196,5 +210,220 @@ h1, h2, h3, h4, h5, h6 {
     color: #d8d8d8;
     font-size: 17px;
 }
+
 /*seconda section*/
 
+.bg-light {
+    background-color: #f8f9fa!important;
+}
+
+.features-icons {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.col-lg-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.features-icons .features-icons-item {
+    max-width: 20rem;
+    font-family: 'Roboto', sans-serif;
+    color: #111;
+}
+
+.mb-lg-3 {
+    margin-bottom: 1rem!important;
+}
+
+.features-icons .features-icons-item .features-icons-icon {
+    height: 7rem;
+}
+
+.d-flex {
+    display: flex!important;
+}
+
+.features-icons .features-icons-item .features-icons-icon i {
+    font-size: 4.5rem;
+    transition: all 0.2s;
+}
+
+.m-auto {
+    margin: auto!important;
+}
+
+.fas {
+    font-weight: 900;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+.main-icons {
+    color: rgb(64, 26, 130);
+}
+
+.fa-money-bill-alt:before {
+    content: "\f3d1";
+}
+
+.fa-eye:before {
+    content: "\f06e";
+}
+
+.fa-headphones:before {
+    content: "\f025";
+}
+
+h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+    margin-top: 0;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.mb-0 {
+    margin-bottom: 0!important;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+p {
+    margin-top: 0;
+}
+
+/* terza section */
+
+section.prossimi { /* anche per settima section */
+    position: relative;
+    padding: 50px 0;
+}
+
+.prossimi-spettacoli { /* anche per settima section */
+    background: linear-gradient(90deg, rgba(64, 26, 130, 1) 0%, rgba(201, 0, 135, 1) 100%);
+}
+
+.col-md-8 {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+section.prossimi h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #d8d8d8;
+    font-weight: 600;
+    font-size: 50px;
+    margin-top: 0;
+    line-height: 1.2;
+}
+
+section.prossimi p {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+    color: #d8d8d8;
+    margin-bottom:  1rem;
+    display: block;
+}
+
+/* quarta-quinta-sesta section */
+
+.align-items-center { /* anche per settima section */
+    align-items: center!important;
+}
+
+.order-lg-2 {
+    order: 2;
+}
+
+.col-lg-6 { /* anche per settima section */
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.p-5 { /* anche per settima section */
+    padding: 3rem!important;
+}
+
+.rounded-circle {
+    border-radius: 50%!important;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.order-lg-1 {
+    order: 1;
+}
+
+.display-4 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+/* settima section */
+
+/* già tutto nelle precedenti */
+
+
+/* footer */
+
+.footer {
+    background: linear-gradient(90deg, rgba(64, 26, 130, 1) 0%, rgba(201, 0, 135, 1) 100%);
+    color: transparent;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.footer p {
+    color: #d6d6d6;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+}
+
+.mb-lg-0 {
+    margin-bottom: 0!important;
+}
+
+.small {
+    font-size: 80%;
+    font-weight: 400;
+}

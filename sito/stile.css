@@ -35,7 +35,7 @@ nav {
 
 .nav-button {
     border-radius: 2px;
-    background: #fff;
+    background: #ffffff;
     padding: 5px 10px 5px;
     color: #fb32b9;
     font-family: 'Roboto', sans-serif;
@@ -44,7 +44,7 @@ nav {
 
 .nav-button:hover {
     background: #fb32b9;
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     transition: all 0.4s;
 }
@@ -731,4 +731,54 @@ footer.footer {
     color: #fff !important;
     text-decoration: none !important;
     margin-right: 30px !important;
+}
+
+
+/* commenti */
+
+.container .top{
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+
+.comments__container{
+    width: 800px;
+    margin-top: 2rem;
+}
+
+.form__info input{
+    border: none;
+    background: transparent;
+    width: 70%;
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.form__info input::placeholder{
+    color: #ddd;
+}
+
+.comment__bottom button{
+    border: none;
+    background: transparent;
+    color: #aaa;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.top button{
+    background-color: #48cae4;
+    height: 50%;
+    border: none;
+    outline: none;
+    color: white;
+    transform: translateY(50%);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.top video{
+    object-fit: fill;
 }
