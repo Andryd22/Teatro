@@ -1,7 +1,6 @@
 /* css per file index.html */
 body {
     margin: 0;
-    font: Arial; 
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -16,55 +15,18 @@ body {
     box-sizing: border-box;
 }
 
-:root {
-    --blue: #007bff;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --pink: #e83e8c;
-    --red: #dc3545;
-    --orange: #fd7e14;
-    --yellow: #ffc107;
-    --green: #28a745;
-    --teal: #20c997;
-    --cyan: #17a2b8;
-    --white: #fff;
-    --gray: #6c757d;
-    --gray-dark: #343a40;
-    --primary: #007bff;
-    --secondary: #6c757d;
-    --success: #28a745;
-    --info: #17a2b8;
-    --warning: #ffc107;
-    --danger: #dc3545;
-    --light: #f8f9fa;
-    --dark: #343a40;
-    --breakpoint-xs: 0;
-    --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
-    font: Arial; 
-}
-
 nav {
     background: linear-gradient(90deg, rgba(64, 26, 130, 1) 0%, rgba(201, 0, 135, 1) 100%);
 }
 
-html {
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-}
-
 .navbar-expand-md {
     flex-flow: row nowrap;
-    justify-content: flex-start;
 }
 
 .navbar {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
     padding: 0.5rem 1rem;
 }
@@ -108,17 +70,10 @@ img {
     transition: all 0.4s;
 }
 
-.fa, .fas {
-    font-weight: 900;
-}
-
-.fa, .fab, .fal, .far, .fas {
-    -webkit-font-smoothing: antialiased;
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    line-height: 1;
+.nav-button:hover{
+    background: #fb32b9;
+    color: #ffffff;
+    transition: background-color;
 }
 
 /* comune */
@@ -164,10 +119,20 @@ a {
     background-color: transparent;
 }
 
+.fas {
+    font-weight: 900;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
 /*prima section*/
 
 section.get-started {
-    position: relative;
+    background-size: 100%;
     font-family: 'Roboto', sans-serif;
     padding: 250px 0;
     background-image: url(/sito/img/teatro.jpg);
@@ -191,8 +156,6 @@ section.get-started .get-started-content h2 {
 }
 
 h2 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
     display: block;
     margin-block-start: 0.83em;
     margin-block-end: 0.83em;
@@ -243,11 +206,11 @@ h2 {
 }
 
 .features-icons .features-icons-item .features-icons-icon {
-    height: 7rem;
+    height: 6rem;
 }
 
 .d-flex {
-    display: flex!important;
+    display: block!important;    
 }
 
 .features-icons .features-icons-item .features-icons-icon i {
@@ -257,16 +220,6 @@ h2 {
 
 .m-auto {
     margin: auto!important;
-}
-
-.fas {
-    font-weight: 900;
-    -webkit-font-smoothing: antialiased;
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    line-height: 1;
 }
 
 .main-icons {

@@ -8,9 +8,25 @@ da implementare:
 	
 
 bug css:
-	- immagine ripetuta più volte
 	- button attaccati
-	- no hover dei button
-	- le icon della section 2 sono di font-awesome
+
+
+css finito:
+	- index.html
+	- eventi.php
+
+
+css da fare:
+	- admin.php
+	- finereg.php
+	- logout.php
+	- register.php
+	- registered.php
+	- scelta.php
+	- sceltachk.php
+	- upload.php
+	- visualizza.php
+
+
 
 https://github.com/Andryd22/Teatro.git
