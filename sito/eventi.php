@@ -10,24 +10,16 @@
     <title>Registrazione Online</title>
     <link rel="stylesheet" href="./styles/eventi.css" type="text/css">
     
-    <!-- href="./stile.css"  -->
-    <!-- href="./styles/eventi.css"
-    
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
--->
 </head>
 
 
 <body>
     <nav class="navbar navbar-expand-md">
-        <a class="navbar-brand" href="index.html"><img src="img/logo.png" /></a>
+        <a class="navbar-brand" href="index.html"><img src=" ./img/logo.png" /></a>
        
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             
-            <a class="nav-button" href="index.html"> Home</a>
+            <a class="nav-button" href="./index.html"> Home</a>
 
             <a class="nav-button" href="register.php"> Registrati</a>
 
@@ -110,7 +102,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 h-100 text-center text-lg-left my-auto">
-                    <p class="small mb-4 mb-lg-0">Andrea Doni &copy; 2023. All Rights Reserved.</p>
+                    <p class="small">Andrea Doni &copy; 2023. All Rights Reserved.</p>
                 </div>
             </div>
         </div>

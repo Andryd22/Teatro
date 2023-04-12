@@ -354,7 +354,9 @@ img {
 
 /* settima section */
 
-/* già tutto nelle precedenti */
+p.giustificare{
+    text-align: justify;
+}
 
 
 /* footer */

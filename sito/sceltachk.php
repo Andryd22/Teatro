@@ -36,7 +36,7 @@
 
 		// Salva se è admin in sessione
 		$_SESSION['admin'] = $isAdmin;
-		//$a=1/0;
+		
 		if($isPasswordCorrect && $isAdmin) { 
 			$salto='Location: ./admin.php';
 	    } 

@@ -9,22 +9,21 @@ da implementare:
 
 bug css:
 	- button attaccati
+	- button di login/conferma non hanno transition trasparente
+	- admin.css backgroup-clip
 
 
 css finito:
 	- index.html
 	- eventi.php
+	- register.php	
+	- registered.php
+	- logout.php
+	- scelta.php
+	- admin.php
 
 
 css da fare:
-	- admin.php
-	- finereg.php
-	- logout.php
-	- register.php
-	- registered.php
-	- scelta.php
-	- sceltachk.php
-	- upload.php
 	- visualizza.php
 
 

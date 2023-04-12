@@ -8,29 +8,20 @@
     <link rel="icon" href="img/favicon.png">
 
     <title>Registrazione Online</title>
-    <link rel="stylesheet" href="stile.css" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="./styles/register.css" type="text/css">
+    
 </head>
 
 <script src="./checkpwd.js"></script>
 
 <body>   
-    <nav class="navbar navbar-expand-md">
-        <a class="navbar-brand" href="index.html"><img src="img/logo.png" /></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-        </button>
-
+<nav class="navbar navbar-expand-md">
+        <a class="navbar-brand" href="index.html"><img src=" ./img/logo.png" /></a>
+       
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a>
-                </li>          
-            </ul>
+            
+            <a class="nav-button" href="./index.html"> Home</a>
+
             <a class="nav-button" href="./eventi.php"> Accedi agli Eventi</a>
         </div>
     </nav>
@@ -114,16 +105,10 @@
                                     <br>                                    
                                 </div>
                             </div>
+                            
                             <br/>
-
-                           
-
                             <br />
 
-                            <div class="form-group">
-                                <button type="submit" class="button contact-submit">Invia Registrazione</button>                                   
-                            </div>
-                            
                             <div class="row">
                                 <div class="box-largo">  
                                     <div id="pwdcheck2">
@@ -137,6 +122,10 @@
                                 </div>
                             </div>
 
+                            <div class="form-group">
+                                <button type="submit" class="button contact-submit">Invia Registrazione</button>                                   
+                            </div>
+
                         </div>
                     </form>
                 </div>
@@ -148,7 +137,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 h-100 text-center text-lg-left my-auto">                  
-                    <p class="small mb-4 mb-lg-0">Andrea Doni &copy; 2023. All Rights Reserved.</p>
+                    <p class="small">Andrea Doni &copy; 2023. All Rights Reserved.</p>
                 </div>
             </div>
         </div>
