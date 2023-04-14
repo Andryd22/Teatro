@@ -42,6 +42,11 @@ nav {
     transition: all 0.4s;
 }
 
+.nav-button.right {
+    position: absolute;
+    right: 2%;
+}
+
 .nav-button:hover {
     background: #fb32b9;
     color: #ffffff;

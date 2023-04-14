@@ -1,7 +1,3 @@
-errori da correggere progetto pweb:
-	- rip bootstrap e splittare css (si possono togliere le animazioni) 
-
-
 da implementare:
 	- visualizzazioni di uno spettacolo
 	- sezione commenti
@@ -11,6 +7,8 @@ bug css:
 	- button attaccati
 	- button di login/conferma non hanno transition trasparente
 	- admin.css backgroup-clip
+	- scelta e admin allineare il "Logged as: "
+	- bug password
 
 
 css finito:

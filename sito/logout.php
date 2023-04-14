@@ -29,7 +29,7 @@
             
             <a class="nav-button" href="./index.html"> Home</a>
 
-            <a class="nav-button" href="register.php"> Registrati</a>
+            <a class="nav-button right" href="register.php"> Registrati</a>
         </div>
     </nav>
     

@@ -26,7 +26,7 @@
             
             <a class="nav-button" href="./index.html"> Home</a>
 
-            <a class="nav-button" href="eventi.php">Accesso Eventi</a>
+            <a class="nav-button right" href="eventi.php">Accesso Eventi</a>
 
         </div>
     </nav>
