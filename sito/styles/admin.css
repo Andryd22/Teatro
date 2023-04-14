@@ -40,10 +40,12 @@ nav {
     color: #ffffff !important;
     text-decoration: none !important;
     margin-right: 30px !important;
-    /*position: absolute;
-    right: auto;*/
 }
 
+.loggato.spostare{
+    position: absolute;
+    right: 5%;
+}
 
 a {
     color: #007bff;
@@ -181,7 +183,7 @@ nav .breadcrumb {
     display: flex;
     flex-wrap: wrap;
     padding: 0.75rem 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
     list-style: none;
 }
 

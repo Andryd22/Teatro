@@ -32,7 +32,7 @@
             
             <a class="nav-button" href="./index.html"> Home</a>
 
-            <a class="loggato">
+            <a class="loggato spostare">
                 <?php
                     echo "Logged as " . $_SESSION['user'] . "";
                 ?>  
@@ -58,11 +58,11 @@
                             Scegliere l'Evento
                         </h1>  
                                                 
-                        <p><br /></p>    
-                        <p><br /></p>
+                        <p><br></p>    
+                        <p><br></p>
                         <div class="form-group ">
 
-                            <p><br /></p>
+                            <p><br></p>
                             <div class="row">
                                 <div class="centra">
                                      <select name="disponibilita" id="disponibilita" class="form-control" required="required" aria-required="true">
@@ -86,10 +86,10 @@
                             
                           
 
-                            <p><br /></p>    
-                            <p><br /></p>     
+                            <p><br></p>    
+                            <p><br></p>     
                             
-                            <p><br /></p>                                            
+                            <p><br></p>                                            
 
                             <div class="form-group">
                                 <button type="submit" class="button contact-submit"><?php echo "Conferma" ?></button>

@@ -62,6 +62,8 @@
                         <h1>                        
                             <?php echo "$titolo" ?>
                         </h1>
+                        <br>
+
                         <div class="form-group ">
                             <div class="row">
                                 <div class="col-sm-offset-2 col-md-6 col-md-offset-0">
@@ -71,19 +73,23 @@
                                     <input type="text" name="cognome" class="form-control" placeholder="Cognome" required>
                                 </div>
                             </div>
-                            <p><br /></p>
+
+                            <br><br>
+
                             <div class="row">
                                 <div class="col-md-6">
                                     <input type="text" name="email" id="email" class="form-control" placeholder="Email" required onchange="verificaEmail(this)">
                                 </div>
                                 <div class="col-md-3">
-                                    <input type="password" name="password" id="password" class="form-control" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required onkeyup="verificaPassword(this)">
+                                    <input type="password" name="password" id="password" class="form-control" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])" required onkeyup="verificaPassword(this)">
                                 </div>
                                 <div class="col-md-3">
-                                    <input type="password" name="password2" id="password2" class="form-control" placeholder="Ripeti Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                                    <input type="password" name="password2" id="password2" class="form-control" placeholder="Ripeti Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])" required>
                                 </div>
                             </div>
-                            <p><br /></p>
+
+                            <br><br>
+
                             <div class="row">
                                 <div class="col-md-4">
                                     <input type="text" name="telefono" class="form-control" placeholder="Numero di Telefono" required>
@@ -95,7 +101,8 @@
                                     <input type="text" name="citta" class="form-control" placeholder="Città" required>
                                 </div>                         
                             </div>
-                            <p><br />
+
+                            <br><br>
                             
 
                             <div class="row">
@@ -106,8 +113,8 @@
                                 </div>
                             </div>
                             
-                            <br/>
-                            <br />
+                            <br>
+                            <br>
 
                             <div class="row">
                                 <div class="box-largo">  

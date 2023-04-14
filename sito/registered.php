@@ -49,16 +49,16 @@
                       
                         <div class="form-group ">
                         
-                            <p><br /></p>                           
-                            <p><br /></p>            
-                            <p><br /></p>    
-                            <p><br /></p>     
+                            <p><br></p>                           
+                            <p><br></p>            
+                            <p><br></p>    
+                            <p><br></p>     
                             Grazie per esserti registrato al nostro servizio
-                            <p><br /></p>                           
-                            <p><br /></p>            
-                            <p><br /></p>    
-                            <p><br /></p>     
-                            <p><br /></p>                                            
+                            <p><br></p>                           
+                            <p><br></p>            
+                            <p><br></p>    
+                            <p><br></p>     
+                            <p><br></p>                                            
 
                             <div class="form-group">
                                 <button type="submit" class="button contact-submit">Effettua il login</button>

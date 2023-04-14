@@ -1,13 +1,12 @@
 da implementare:
 	- visualizzazioni di uno spettacolo
 	- sezione commenti
-	
+	- allineare il "Logged as: " in visualizza
+	- semplificare css
 
 bug css:
-	- button attaccati
 	- button di login/conferma non hanno transition trasparente
-	- admin.css backgroup-clip
-	- scelta e admin allineare il "Logged as: "
+	- admin.css backgroup-clip	
 	- bug password
 
 

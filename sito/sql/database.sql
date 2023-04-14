@@ -49,7 +49,7 @@ insert into cittadino(nome, cognome, telefono, mail, password_account, via, citt
 ("Mario", "Rossi", 3410000000, "mariorossi@gmail.com", "$2y$10$nxHceyE/5RrnHoyP1MYr6.keGxfKYbILZZMC5VLM7uZGyHmvnqGVy", "Via Diotisalvi 1", "Pisa", 0),
 ("Luigi", "Verdi", 3420000000, "luigiverdi@gmail.com", "$2y$10$BfMPiSDDNqoaWRhVJ451xuhDB375nkkTBkPM2k4HNa9a4Yqj6Gjm6", "Via Diotisalvi 2", "Pisa", 0),
 ("Carlo", "Neri", 3430000000, "carloneri@gmail.com", "$2y$10$QVYHfUiRMy7brOAYqEs3wOL275sd7TsTGsG2g3nleRd2/8tiy/Q02", "Via Diotisalvi 3", "Pisa", 0),
-("Andrea", "Doni", 342778129, "andry2d2@gmail.com", "$2y$10$ta4aWRfugS9v6f5AAoigEOd97qohaoFXV.j4km9VTspOz6yPX5pXm", "via dell'acquerata", "stabbia", 0);
+("Andrea", "Doni", 3427778129, "andry2d2@gmail.com", "$2y$10$ta4aWRfugS9v6f5AAoigEOd97qohaoFXV.j4km9VTspOz6yPX5pXm", "via dell'acquerata", "stabbia", 0);
 
 /*
 MarioR1!

@@ -33,7 +33,7 @@
             
             <a class="nav-button" href="./index.html"> Home</a>
 
-            <a class="loggato">
+            <a class="loggato spostare">
                 <?php
                     echo "Logged as " . $_SESSION['user'] . "";
                 ?>  

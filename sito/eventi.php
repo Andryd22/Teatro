@@ -68,24 +68,24 @@
                         </h7>
                         <div class="form-group ">
 
-                        <p><br /></p>
+                        <p><br></p>
                         <div class="row">
                             <div class="centra">
                                 <input type="text" name="email" class="form-control" placeholder="Email usata in fase di registrazione" required> 
                             </div>                               
                         </div>
                         
-                        <p><br /></p>            
+                        <p><br></p>            
                         <div class="row">                               
                             <div class="centra">
                                 <input type="password" name="password" class="form-control" placeholder="Password" required>
                             </div>
                         </div>
 
-                        <p><br /></p>    
-                        <p><br /></p>     
+                        <p><br></p>    
+                        <p><br></p>     
                         
-                        <p><br /></p>                                            
+                        <p><br></p>                                            
 
                         <div class="form-group">
                             <button type="submit" class="button contact-submit"><?php echo "$bottone" ?></button>
