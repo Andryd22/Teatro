@@ -81,10 +81,10 @@
                                     <input type="text" name="email" id="email" class="form-control" placeholder="Email" required onchange="verificaEmail(this)">
                                 </div>
                                 <div class="col-md-3">
-                                    <input type="password" name="password" id="password" class="form-control" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])" required onkeyup="verificaPassword(this)">
+                                    <input type="password" name="password" id="password" class="form-control" placeholder="Password" required onkeyup="verificaPassword(this)">
                                 </div>
                                 <div class="col-md-3">
-                                    <input type="password" name="password2" id="password2" class="form-control" placeholder="Ripeti Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])" required>
+                                    <input type="password" name="password2" id="password2" class="form-control" placeholder="Ripeti Password" required>
                                 </div>
                             </div>
 
@@ -130,7 +130,7 @@
                             </div>
 
                             <div class="form-group">
-                                <button type="submit" class="button contact-submit">Invia Registrazione</button>                                   
+                                <button type="submit" class="button contact-submit" onclick="verificaCampi();">Invia Registrazione</button>                                   
                             </div>
 
                         </div>

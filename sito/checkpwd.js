@@ -7,7 +7,6 @@ function verificaPassword() {
     var numero = document.getElementById("numero");
     var carspeciale = document.getElementById("carspeciale");
 
-   
     // valida le lettere minuscole
     var lettereminuscole = /[a-z]/g;
     if(pwd.value.match(lettereminuscole)) {
@@ -65,4 +64,35 @@ function verificaEmail(input) {
         alert("Indirizzo email invalido!");   
         return false;
     }
+}
+
+function verificaCampi() {
+  
+    var campopwd1 = document.getElementById("password").value;
+    var campopwd2 = document.getElementById("password2").value;
+    var campoemail = document.getElementById("email");
+
+    var ok = true;
+
+    if (verificaEmail(campoemail) === false) {
+        ok = false;
+    }
+
+    if (verificaPassword()) {
+        ok = false;    
+    }
+
+    if (campopwd1 != campopwd2) {
+        alert("Le password non sono identiche!");     
+        ok = false;      
+    }
+
+    var pattern = new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]).{6,}$/);
+    if(pattern.test(campopwd1) === false){
+        alert("La password non è abbastanza complessa!");     
+        ok = false;    
+   }
+   
+   return ok;    
+
 }

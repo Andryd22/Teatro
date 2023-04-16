@@ -57,3 +57,16 @@ LuigiV2!
 CarloN3!
 */
 
+create table commenti(
+  codice_commento int auto_increment primary key,  
+  codice_evento int not null,
+  id int not null,
+  commento varchar(300) not null,
+  FOREIGN KEY (id) REFERENCES cittadino(id),
+  FOREIGN KEY (codice_evento) REFERENCES evento(codice_evento)
+) engine=INNODB;
+
+
+insert into commenti(codice_evento,id,commento) values
+(1,2,"mi è piaciuto tanto"),
+(1,5,"gli attori son stati bravissimi");

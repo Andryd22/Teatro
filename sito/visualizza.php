@@ -9,14 +9,13 @@
 
     <title>Visualizza</title>
     <link rel="stylesheet" href="stile.css" type="text/css">
+
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
 </head>
-
-<script src="commenti.js"></script>
 
 <?php
     require  __DIR__ . "/php/connessione.php";
@@ -40,6 +39,25 @@
         $query3="UPDATE evento SET dislike=dislike+1 WHERE codice_evento=" . $_SESSION["disponibilita"];
         $result3=mysqli_query($connessionesql,$query3);  
     }
+
+    if(isset($_GET["addCommento"]) && $_GET["addCommento"] == 1) {
+ 
+	// Recupero parametri per il cittadino
+        $query30="SELECT id FROM cittadino WHERE mail=" . $_SESSION['user'];
+        $result30=mysqli_query($connessionesql,$query30);
+        $id=mysqli_fetch_row($result30);
+
+        echo $id;
+        $a=1/0;
+        // Recupero gli altri valori
+        $disponibilita = $_SESSION["disponibilita"];
+        $commento=addslashes($_REQUEST['commento']);
+       
+		// Esegue la insert per la tabella commenti
+        $query="INSERT INTO Commenti(codice_evento,id,commento) VALUES ('$disponibilita','$id','$commento');";
+		mysqli_query($connessionesql,$query);		            
+    }
+
 ?>   
 
 <body>   
@@ -137,22 +155,50 @@
             }
         }
 
+        function aggiungiCommento( ) {
+            debugger;
+     
+            fetch("/sito/visualizza.php?addCommento=1", {
+                    method: "GET"
+                }).then(() => {
+                    window.location.reload();
+                })
+        }
+
     </script>
 
     <!-- sezione commenti -->
     <div class="container center__display">
         <div class="top">
             <form>
+           
                 <div class="form__info center__display">
-                    <input type="text" name="commento" id="commento" placeholder="inserisci un commento">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <input type="text" name="commento" id="commento" placeholder="Inserisci un commento">
+                            <button onclick="aggiungiCommento();">Commenta</button>                        
+                        </div>                                  
+                        <div class="col-lg-6">
+                            <div class="row">Commenti precedenti:</div>
+                            <?php 
+                        
+                                $query22="SELECT mail, commento FROM commenti c INNER JOIN cittadino i ON i.id=c.id WHERE codice_evento=" . $disponibilita;
+                                $result22=mysqli_query($connessionesql,$query22);                                                      
+
+                                while ($commenti = mysqli_fetch_row($result22)) {
+                                    $mail_utente=$commenti[0];
+                                    $commmento_utente=$commenti[1];
+
+                                    echo "<div class=\"row\">" . $mail_utente . " : " . $commmento_utente . "</div>";
+                                }
+                        
+                            ?>                           
+                        </div>  
+                    </div>                  
                 </div>
-                <button onclick="aggiungiComm()">
-                    Commenta
-                </button>
+                
             </form>
         </div>
     </div>
-
-
 </body>
 </html>

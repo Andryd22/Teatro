@@ -6,10 +6,12 @@ const commentsCont = document.querySelector('.comments__container')*/
 
 
 function resettaForm(){
+    debugger;
     commento.value = ''
 }
 
 function aggiungiComm(item){
+    debugger;
     // select first letter of the user name
     const nick = $_SESSION['user'];
     var_dump(nick);

@@ -7,7 +7,7 @@ da implementare:
 bug css:
 	- button di login/conferma non hanno transition trasparente
 	- admin.css backgroup-clip	
-	- bug password
+	- aggiungere in reg "almeno 6 caratteri"
 
 
 css finito:
