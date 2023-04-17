@@ -50,7 +50,6 @@ function verificaPassword() {
         carspeciale.classList.remove("valid");
         carspeciale.classList.add("invalid");
     }
-
 }
 
 function verificaEmail(input) {

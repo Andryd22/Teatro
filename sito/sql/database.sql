@@ -38,6 +38,15 @@ create table visiona(
   FOREIGN KEY (codice_evento) REFERENCES evento(codice_evento)
 ) engine=INNODB;
 
+create table commenti(
+  codice_commento int auto_increment primary key,  
+  codice_evento int not null,
+  id int not null,
+  commento varchar(300) not null,
+  FOREIGN KEY (id) REFERENCES cittadino(id),
+  FOREIGN KEY (codice_evento) REFERENCES evento(codice_evento)
+) engine=INNODB;
+
 insert into evento(nome, tipo, data_evento, path_to_video) VALUES
 ('Hamilton', 'musical', '2023-06-25', './video/hamilton.mp4'),
 ('Hamilton', 'musical', '2023-06-30', './video/hamilton.mp4'),
@@ -51,22 +60,14 @@ insert into cittadino(nome, cognome, telefono, mail, password_account, via, citt
 ("Carlo", "Neri", 3430000000, "carloneri@gmail.com", "$2y$10$QVYHfUiRMy7brOAYqEs3wOL275sd7TsTGsG2g3nleRd2/8tiy/Q02", "Via Diotisalvi 3", "Pisa", 0),
 ("Andrea", "Doni", 3427778129, "andry2d2@gmail.com", "$2y$10$ta4aWRfugS9v6f5AAoigEOd97qohaoFXV.j4km9VTspOz6yPX5pXm", "via dell'acquerata", "stabbia", 0);
 
+insert into commenti(codice_evento,id,commento) VALUES
+(1,2,'mi è piaciuto tanto'),
+(1,5,'gli attori son stati bravissimi');
+
 /*
 MarioR1!
 LuigiV2!
 CarloN3!
 */
 
-create table commenti(
-  codice_commento int auto_increment primary key,  
-  codice_evento int not null,
-  id int not null,
-  commento varchar(300) not null,
-  FOREIGN KEY (id) REFERENCES cittadino(id),
-  FOREIGN KEY (codice_evento) REFERENCES evento(codice_evento)
-) engine=INNODB;
 
-
-insert into commenti(codice_evento,id,commento) values
-(1,2,"mi è piaciuto tanto"),
-(1,5,"gli attori son stati bravissimi");

@@ -122,18 +122,17 @@
     ?>
     
     <nav class="navbar navbar-expand-md">
-        <input type="hidden" id="incrementaQuale" name="incrementaQuale">
-        <button class="nav-button" onclick="incrementaValori(1);"> Like: <?php echo $valori[0] ?>
-            
-        </button>
+        <div class="row">
+            <input type="hidden" id="incrementaQuale" name="incrementaQuale">
+                <button class="nav-button" onclick="incrementaValori(1);"> Like: <?php echo $valori[0] ?></button>
 
+            <input type="hidden" id="incrementaQuale" name="incrementaQuale">
+                <button class="nav-button" onclick="incrementaValori(-1);"> Dislike: <?php echo $valori[1] ?></button>
+        </div>
     </nav>
 
     <nav class="navbar navbar-expand-md">
-        <input type="hidden" id="incrementaQuale" name="incrementaQuale">
-            <button class="nav-button" onclick="incrementaValori(-1);"> Dislike: <?php echo $valori[1] ?>
-                
-            </button>
+        
     </nav>
 
     <script>
@@ -176,10 +175,14 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <input type="text" name="commento" id="commento" placeholder="Inserisci un commento">
-                            <button onclick="aggiungiCommento();">Commenta</button>                        
+                            <a class="nav-button2" onclick="aggiungiCommento();">Commenta</a>                        
                         </div>                                  
-                        <div class="col-lg-6">
-                            <div class="row">Commenti precedenti:</div>
+                        <div class="col-lg-6-2">
+
+                            <br>
+                            <div class="row2">COMMENTI PRECEDENTI</div>
+                            <br>
+                            
                             <?php 
                         
                                 $query22="SELECT mail, commento FROM commenti c INNER JOIN cittadino i ON i.id=c.id WHERE codice_evento=" . $disponibilita;
@@ -187,9 +190,9 @@
 
                                 while ($commenti = mysqli_fetch_row($result22)) {
                                     $mail_utente=$commenti[0];
-                                    $commmento_utente=$commenti[1];
+                                    $commento_utente=$commenti[1];
 
-                                    echo "<div class=\"row\">" . $mail_utente . " : " . $commmento_utente . "</div>";
+                                    echo "<div class=\"row2\">" . $mail_utente .  " -> "  . $commento_utente . "</div> <br>";
                                 }
                         
                             ?>                           
