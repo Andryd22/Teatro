@@ -39,20 +39,21 @@
         $query3="UPDATE evento SET dislike=dislike+1 WHERE codice_evento=" . $_SESSION["disponibilita"];
         $result3=mysqli_query($connessionesql,$query3); 
     }
+  
+    if(isset($_POST['commento'])) {
 
-    if(isset($_GET["addCommento"]) && $_GET["addCommento"] == 1) {
 	    // Recupero parametri per il cittadino
-        $query30="SELECT id FROM cittadino WHERE mail=" . $_SESSION['user'];
+        $query30="SELECT id FROM cittadino WHERE mail='" . $_SESSION['user'] . "'";
+        
         $result30=mysqli_query($connessionesql,$query30);
         $id=mysqli_fetch_row($result30);
-
         
         // Recupero gli altri valori
         $disponibilita = $_SESSION["disponibilita"];
-        $commento=addslashes($_REQUEST['commento']);
-       
+        $commento=addslashes($_POST['commento']);
+
 		// Esegue la insert per la tabella commenti
-        $query40="INSERT INTO Commenti(codice_evento,id,commento) VALUES ($disponibilita,$id,'$commento');";
+        $query40="INSERT INTO Commenti(codice_evento,id,commento) VALUES ($disponibilita,$id[0],'$commento');";
 		mysqli_query($connessionesql,$query40);		            
     }
 
@@ -101,14 +102,11 @@
             $path_to_video=$campi[0];
         }
 
-
         $_SESSION["disponibilita"] = $disponibilita;
-        
     ?>
 
     <video width="100%" controls>
       <source src="<?php echo $path_to_video; ?>">
-        
     </video>
       
     <?php 
@@ -129,9 +127,7 @@
         </div>
     </nav>
 
-    <nav class="navbar navbar-expand-md">
-        
-    </nav>
+    
 
     <script>
 
@@ -152,26 +148,23 @@
             }
         }
 
-        function aggiungiCommento() {     
-            fetch("/sito/visualizza.php?addCommento=1",{//&commento=" + document.getElementById("commento").value, {
-                    method: "GET"
-                }).then(() => {
-                   window.location.reload();
-                })
-        }
-
     </script>
 
     <!-- sezione commenti -->
     <div class="container center__display">
         <div class="top">
-            <form>
-           
+         
+            <form action="./visualizza.php" method="post" id="visualizza" class="form-horizontal text-center" role="form">
+
                 <div class="form__info center__display">
                     <div class="row">
                         <div class="col-lg-6">
+
+                            <input type="hidden" id="disponibilita" name="disponibilita" value="<?php echo $disponibilita; ?>"> 
+
                             <input type="text" name="commento" id="commento" placeholder="Inserisci un commento">
-                            <a class="nav-button2" onclick="aggiungiCommento();">Commenta</a>                        
+                            <button type="submit" class="button contact-submit" onclick="verificaCampi();">Commenta</button>                                                              
+                      
                         </div>                                  
                         <div class="col-lg-6-2">
 
@@ -185,6 +178,7 @@
                                 $result22=mysqli_query($connessionesql,$query22);                                                      
 
                                 while ($commenti = mysqli_fetch_row($result22)) {
+
                                     $mail_utente=$commenti[0];
                                     $commento_utente=$commenti[1];
 
