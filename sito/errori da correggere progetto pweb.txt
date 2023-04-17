@@ -2,6 +2,7 @@ da implementare:
 	- visualizzazioni di uno spettacolo
 	- sminchiato session
 	- semplificare css
+	- like/dislike più da una persona
 
 bug css:
 	- button di login/conferma non hanno transition trasparente

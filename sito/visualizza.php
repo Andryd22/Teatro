@@ -37,25 +37,23 @@
 
     if(isset($_GET["addDislike"]) && $_GET["addDislike"] == 1) {
         $query3="UPDATE evento SET dislike=dislike+1 WHERE codice_evento=" . $_SESSION["disponibilita"];
-        $result3=mysqli_query($connessionesql,$query3);  
+        $result3=mysqli_query($connessionesql,$query3); 
     }
 
     if(isset($_GET["addCommento"]) && $_GET["addCommento"] == 1) {
- 
-	// Recupero parametri per il cittadino
+	    // Recupero parametri per il cittadino
         $query30="SELECT id FROM cittadino WHERE mail=" . $_SESSION['user'];
         $result30=mysqli_query($connessionesql,$query30);
         $id=mysqli_fetch_row($result30);
 
-        echo $id;
-        $a=1/0;
+        
         // Recupero gli altri valori
         $disponibilita = $_SESSION["disponibilita"];
         $commento=addslashes($_REQUEST['commento']);
        
 		// Esegue la insert per la tabella commenti
-        $query="INSERT INTO Commenti(codice_evento,id,commento) VALUES ('$disponibilita','$id','$commento');";
-		mysqli_query($connessionesql,$query);		            
+        $query40="INSERT INTO Commenti(codice_evento,id,commento) VALUES ($disponibilita,$id,'$commento');";
+		mysqli_query($connessionesql,$query40);		            
     }
 
 ?>   
@@ -154,13 +152,11 @@
             }
         }
 
-        function aggiungiCommento( ) {
-            debugger;
-     
-            fetch("/sito/visualizza.php?addCommento=1", {
+        function aggiungiCommento() {     
+            fetch("/sito/visualizza.php?addCommento=1",{//&commento=" + document.getElementById("commento").value, {
                     method: "GET"
                 }).then(() => {
-                    window.location.reload();
+                   window.location.reload();
                 })
         }
 
