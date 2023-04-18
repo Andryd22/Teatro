@@ -62,7 +62,7 @@ insert into cittadino(nome, cognome, telefono, mail, password_account, via, citt
 
 insert into commenti(codice_evento,id,commento) VALUES
 (1,2,'mi è piaciuto tanto'),
-(1,5,'gli attori son stati bravissimi');
+(1,3,'gli attori son stati bravissimi');
 
 /*
 MarioR1!

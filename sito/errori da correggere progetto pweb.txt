@@ -1,8 +1,16 @@
 da implementare:
 	- visualizzazioni di uno spettacolo
 	- sminchiato session
-	- semplificare css
-	- like/dislike più da una persona
+	- più like/dislike ogni persona:
+		(
+			ulteriore campo nella tabella utente (commentato? si/no)
+			al momento del click faccio una query che vede se ha già commentato quel determinato spettacolo in precedenza
+				- se sì -> refresho la pagina passando, ad esempio, valore -2
+					una volta refreshata (dove c'è il controllo del +1/-1 like/dislike) controllo se è valore = -2,
+					in tal caso non faccio nulla e dico che non può commentare
+				- se no -> refresho la pagina normalmente, e dopo aver aggiunto like/dislike imposto il valore della tabella commentato=si
+		)
+
 
 bug css:
 	- button di login/conferma non hanno transition trasparente
@@ -17,9 +25,6 @@ css finito:
 	- logout.php
 	- scelta.php
 	- admin.php
-
-
-css da fare:
 	- visualizza.php
 
 
