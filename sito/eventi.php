@@ -12,6 +12,15 @@
     
 </head>
 
+<?php 
+    session_start();
+
+    /*if(isset($_SESSION['user'])) {
+        $salto='Location: ./scelta.php';
+		header($salto, true, 303);
+		die();
+    }*/
+?>
 
 <body>
     <nav class="navbar navbar-expand-md">

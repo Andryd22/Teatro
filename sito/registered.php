@@ -9,14 +9,10 @@
 
     <title>Registrazione Effettuata</title>
 
-    <link rel="stylesheet" href="styles/registered-logout.css" type="text/css">
+    <link rel="stylesheet" href="styles/registered-logout-upload.css" type="text/css">
 
 </head>
 
-<?php
-    session_start();
-    session_destroy();   
-?>
 
 <body>
     <nav class="navbar navbar-expand-md">

@@ -1,8 +1,5 @@
 <?php	
 	
-	session_start();
-    session_destroy();   
-
     if(isset($_REQUEST["email"])){
 		
 		// Connessione al db

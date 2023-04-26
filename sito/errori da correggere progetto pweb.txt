@@ -1,10 +1,10 @@
 da implementare:
 	- visualizzazioni di uno spettacolo
-	- sminchiato session
+	- bug session root
 	- più like/dislike ogni persona:
 		(
-			ulteriore campo nella tabella utente (commentato? si/no)
-			al momento del click faccio una query che vede se ha già commentato quel determinato spettacolo in precedenza
+			ulteriore campo nella tabella utente (click? si/no)
+			al momento del click faccio una query che vede se ha già messo like/dislike quel determinato spettacolo in precedenza
 				- se sì -> refresho la pagina passando, ad esempio, valore -2
 					una volta refreshata (dove c'è il controllo del +1/-1 like/dislike) controllo se è valore = -2,
 					in tal caso non faccio nulla e dico che non può commentare
@@ -17,15 +17,7 @@ bug css:
 	- admin.css backgroup-clip
 
 
-css finito:
-	- index.html
-	- eventi.php
-	- register.php	
-	- registered.php
-	- logout.php
-	- scelta.php
-	- admin.php
-	- visualizza.php
+rimuovere parti commentate di vecchio css.
 
 
 

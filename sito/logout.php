@@ -8,7 +8,7 @@
     <link rel="icon" href="img/favicon.png">
 
     <title>Registrazione Online</title>
-    <link rel="stylesheet" href="./styles/registered-logout.css" type="text/css">
+    <link rel="stylesheet" href="./styles/registered-logout-upload.css" type="text/css">
    
 </head>
 

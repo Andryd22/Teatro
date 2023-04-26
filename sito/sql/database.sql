@@ -16,7 +16,7 @@ create table cittadino(
   password_account varchar(1000) not null,
   via char(100) not null,
   citta char(100) not null,
-  isAdmin TINYINT(1) default 0
+  isAdmin tinyint(1) default 0
 ) engine=INNODB;
 
 create table evento(
@@ -44,6 +44,15 @@ create table commenti(
   id int not null,
   commento varchar(300) not null,
   FOREIGN KEY (id) REFERENCES cittadino(id),
+  FOREIGN KEY (codice_evento) REFERENCES evento(codice_evento)
+) engine=INNODB;
+
+create table interazionecittadinoevento(
+  codice int auto_increment primary key,
+  codice_cittadino int not null,
+  codice_evento int not null,
+  click tinyint(1) default 0,
+  FOREIGN KEY (codice_cittadino) REFERENCES cittadino(id),
   FOREIGN KEY (codice_evento) REFERENCES evento(codice_evento)
 ) engine=INNODB;
 

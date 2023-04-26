@@ -108,7 +108,7 @@ section, footer, div{
     margin-right: auto!important;
 }
 
-.fancy-underline {
+.sottilineatura {
     border-bottom: 2px solid transparent;
     border-image: linear-gradient(to right, #ebb431 0%, #c90087 100%);
     border-image-slice: 1;

@@ -31,15 +31,37 @@
 		die();
     }
 
-    if(isset($_GET["addLike"]) && $_GET["addLike"] == 1) {
-        $query3="UPDATE evento SET likes=likes+1 WHERE codice_evento=" . $_SESSION["disponibilita"];
-        $result3=mysqli_query($connessionesql,$query3);  
+    $controlloclick="   SELECT click 
+                        FROM interazionecittadinoevento 
+                        WHERE codice_cittadino=" . $_SESSION["user"] .  
+                        " AND codice_evento=" . $_SESSION["disponibilita"];
+    
+    $procedere=mysqli_query($connessionesql,$controlloclick);
+
+    /*
+    - se click = 0 -> dislike per l'evento
+    - se click = 1 -> like per l'evento
+    */
+
+    if($procedere->num_rows!=0){
+
+        if(isset($_GET["addLike"]) && $_GET["addLike"] == 1) {
+            $query3="UPDATE interazionecittadinoevento SET click=1, codice_evento=" . $_SESSION["disponibilita"] .", codice_cittadino=" . $_SESSION["user"]; //WHERE codice_evento=" . $_SESSION["disponibilita"];
+            $result3=mysqli_query($connessionesql,$query3);  
+        }
+
+        if(isset($_GET["addDislike"]) && $_GET["addDislike"] == 1) {
+            $query3="UPDATE interazionecittadinoevento SET click=0, codice_evento=" . $_SESSION["disponibilita"] .", codice_cittadino=" . $_SESSION["user"]; //WHERE codice_evento=" . $_SESSION["disponibilita"];
+            $result3=mysqli_query($connessionesql,$query3); 
+        }
+
+    }
+    else {
+        $inserimento="  INSERT INTO interazionecittadinoevento(codice_cittadino, codice_evento, click) 
+                        VALUES ($_SESSION['user'], $_SESSION['disponibilita'], 1)";
+        $result=mysqli_query($connessionesql,$inserimento);
     }
 
-    if(isset($_GET["addDislike"]) && $_GET["addDislike"] == 1) {
-        $query3="UPDATE evento SET dislike=dislike+1 WHERE codice_evento=" . $_SESSION["disponibilita"];
-        $result3=mysqli_query($connessionesql,$query3); 
-    }
   
     if(isset($_POST['commento'])) {
 
@@ -108,19 +130,22 @@
       
     <?php 
        
-        $query21="SELECT likes, dislike FROM evento WHERE codice_evento=" . $disponibilita;
+        $query21="SELECT COUNT() FROM interazionecittadinoevento WHERE click=1"; //likes
+        $query22="SELECT COUNT() FROM interazionecittadinoevento WHERE click=0"; //dislike
         $result21=mysqli_query($connessionesql,$query21);
-        $valori=mysqli_fetch_row($result21);
+        $result22=mysqli_query($connessionesql,$query22);
+        $likes=mysqli_fetch_row($result21);
+        $dislike=mysqli_fetch_row($result22);
         
     ?>
     
     <nav class="navbar navbar-expand-md">
         <div class="row">
             <input type="hidden" id="incrementaQuale" name="incrementaQuale">
-                <button class="nav-button" onclick="incrementaValori(1);"> Like: <?php echo $valori[0] ?></button>
+                <button class="nav-button" onclick="incrementaValori(1);"> Like: <?php echo $likes ?></button>
 
             <input type="hidden" id="incrementaQuale" name="incrementaQuale">
-                <button class="nav-button" onclick="incrementaValori(-1);"> Dislike: <?php echo $valori[1] ?></button>
+                <button class="nav-button" onclick="incrementaValori(-1);"> Dislike: <?php echo $dislike ?></button>
         </div>
     </nav>
 

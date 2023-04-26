@@ -85,7 +85,7 @@
                         <br><br><br>
 
                         <div class="form-group">
-                            <button type="submit" class="button contact-submit"><?php echo "Conferma" ?></button> <!-- value=upload ??????? -->
+                            <button type="submit" class="button contact-submit"><?php echo "Conferma" ?></button> 
                         </div>
 
                     </form>
