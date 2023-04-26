@@ -58,7 +58,7 @@
     }
     else {
         $inserimento="  INSERT INTO interazionecittadinoevento(codice_cittadino, codice_evento, click) 
-                        VALUES ($_SESSION['user'], $_SESSION['disponibilita'], 1)";
+                        VALUES ('{$_SESSION['user']}', '{$_SESSION['disponibilita']}', 1)";
         $result=mysqli_query($connessionesql,$inserimento);
     }
 
@@ -130,8 +130,8 @@
       
     <?php 
        
-        $query21="SELECT COUNT() FROM interazionecittadinoevento WHERE click=1"; //likes
-        $query22="SELECT COUNT() FROM interazionecittadinoevento WHERE click=0"; //dislike
+        $query21="SELECT COUNT(*) FROM interazionecittadinoevento WHERE click=1"; //likes
+        $query22="SELECT COUNT(*) FROM interazionecittadinoevento WHERE click=0"; //dislike
         $result21=mysqli_query($connessionesql,$query21);
         $result22=mysqli_query($connessionesql,$query22);
         $likes=mysqli_fetch_row($result21);
