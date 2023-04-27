@@ -51,7 +51,7 @@ create table interazionecittadinoevento(
   codice int auto_increment primary key,
   codice_cittadino int not null,
   codice_evento int not null,
-  click tinyint(1) default 0,
+  click tinyint(1),
   FOREIGN KEY (codice_cittadino) REFERENCES cittadino(id),
   FOREIGN KEY (codice_evento) REFERENCES evento(codice_evento)
 ) engine=INNODB;
