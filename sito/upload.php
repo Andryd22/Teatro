@@ -85,21 +85,21 @@
                       
                         <div class="form-group ">
                         
-                            <p><br></p>                           
-                            <p><br></p>            
-                            <p><br></p>    
-                            <p><br></p> 
+                            <br>                           
+                            <br>            
+                            <br>    
+                            <br> 
 
                             <?php
                             if($ok==1) echo "Spettacolo inserito correttamente nel database"; //in: " . __DIR__ . "/video/" . $_FILES["file"]["name"];
                             if($ok==0) echo $_FILES["file"]["name"] . " esiste già in questa data";  
                             ?>
 
-                            <p><br></p>                           
-                            <p><br></p>            
-                            <p><br></p>    
-                            <p><br></p>     
-                            <p><br></p>                                            
+                            <br>                           
+                            <br>            
+                            <br>    
+                            <br>     
+                            <br>                                            
 
                             <div class="form-group">
                                 <button type="submit" class="button contact-submit">Torna alla sezione Admin</button>

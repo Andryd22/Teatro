@@ -58,11 +58,11 @@
                             Scegliere l'Evento
                         </h1>  
                                                 
-                        <p><br></p>    
-                        <p><br></p>
+                        <br>    
+                        <br>
                         <div class="form-group ">
 
-                            <p><br></p>
+                            <br>
                             <div class="row">
                                 <div class="centra">
                                      <select name="disponibilita" id="disponibilita" class="form-control" required="required" aria-required="true">
@@ -86,10 +86,10 @@
                             
                           
 
-                            <p><br></p>    
-                            <p><br></p>     
+                            <br>    
+                            <br>     
                             
-                            <p><br></p>                                            
+                            <br>                                            
 
                             <div class="form-group">
                                 <button type="submit" class="button contact-submit"><?php echo "Conferma" ?></button>

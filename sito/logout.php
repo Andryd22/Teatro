@@ -51,16 +51,16 @@
                       
                         <div class="form-group ">
                         
-                            <p><br></p>                           
-                            <p><br></p>            
-                            <p><br></p>    
-                            <p><br></p>     
+                            <br>                           
+                            <br>            
+                            <br>    
+                            <br>     
                             Grazie per aver utilizzato il nostro servizio
-                            <p><br></p>                           
-                            <p><br></p>            
-                            <p><br></p>    
-                            <p><br></p>     
-                            <p><br></p>                                            
+                            <br>                           
+                            <br>            
+                            <br>    
+                            <br>     
+                            <br>                                            
 
                             <div class="form-group">
                                 <button type="submit" class="button contact-submit">Torna a Home Page</button>

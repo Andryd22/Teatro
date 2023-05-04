@@ -15,11 +15,11 @@
 <?php 
     session_start();
 
-    /*if(isset($_SESSION['user'])) {
+    if(isset($_SESSION['user'])) {
         $salto='Location: ./scelta.php';
 		header($salto, true, 303);
 		die();
-    }*/
+    }
 ?>
 
 <body>
@@ -77,24 +77,24 @@
                         </h7>
                         <div class="form-group ">
 
-                        <p><br></p>
+                        <br>
                         <div class="row">
                             <div class="centra">
                                 <input type="text" name="email" class="form-control" placeholder="Email usata in fase di registrazione" required> 
                             </div>                               
                         </div>
                         
-                        <p><br></p>            
+                        <br>            
                         <div class="row">                               
                             <div class="centra">
                                 <input type="password" name="password" class="form-control" placeholder="Password" required>
                             </div>
                         </div>
 
-                        <p><br></p>    
-                        <p><br></p>     
+                        <br>    
+                        <br>     
                         
-                        <p><br></p>                                            
+                        <br>                                            
 
                         <div class="form-group">
                             <button type="submit" class="button contact-submit"><?php echo "$bottone" ?></button>

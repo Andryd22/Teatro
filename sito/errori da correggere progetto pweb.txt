@@ -1,11 +1,9 @@
 da implementare:
 	- visualizzazioni di uno spettacolo
-	- bug session root
-	- bug sessioni (di nuovo)
-
-bug css:
-	- button di login/conferma non hanno transition trasparente
-
+	- bug session root (
+							dopo essermi loggato con root,
+							se esco e rientro accedo agli eventi con root@gmail.com
+						)
 
 rimuovere parti commentate di vecchio css.
 
