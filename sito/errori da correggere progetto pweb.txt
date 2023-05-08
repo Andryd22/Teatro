@@ -3,10 +3,11 @@ da implementare:
 	- bug session root (
 							dopo essermi loggato con root,
 							se esco e rientro accedo agli eventi con root@gmail.com
-						)
+						) -> index.html
 
 rimuovere parti commentate di vecchio css.
 
+-> verificare css online (leggere specifiche progetto)
 
 
 https://github.com/Andryd22/Teatro.git

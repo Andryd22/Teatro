@@ -12,10 +12,10 @@
 		
 		// Esegue la insert per la tabella Cittadino
         $query="SELECT password_account, isAdmin FROM Cittadino WHERE mail='" . $email . "' LIMIT 1;";     	  
-		echo "query: " . $query;
+
 		$result=mysqli_query($connessionesql,$query);
         
-		$isPasswordCorrect=false;
+		$isPasswordCorrect = false;
 		$isAdmin = false;
 		
         while ($campi = mysqli_fetch_row($result)) {				

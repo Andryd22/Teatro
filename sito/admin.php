@@ -17,7 +17,7 @@
 
     // Controlla se siamo in sessione
     if (!isset($_SESSION['user'])) {
-        $salto='Location: /scelta.php'; //bug
+        $salto='Location: /scelta.php';
 		header($salto, true, 303);
 		die();
     }
