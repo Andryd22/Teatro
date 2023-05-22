@@ -44,7 +44,6 @@ nav {
 img {
     vertical-align: middle;
     border-style: none;
-    overflow-clip-margin: content-box;
     overflow: clip;
 }
 
@@ -126,7 +125,6 @@ a {
 
 .fas {
     font-weight: 900;
-    -webkit-font-smoothing: antialiased;
     display: inline-block;
     font-style: normal;
     font-variant: normal;

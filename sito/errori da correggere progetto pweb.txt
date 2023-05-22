@@ -4,10 +4,20 @@ da implementare:
 							dopo essermi loggato con root,
 							se esco e rientro accedo agli eventi con root@gmail.com
 						) -> index.html
+bug scritti su whatsapp
 
 rimuovere parti commentate di vecchio css.
 
--> verificare css online (leggere specifiche progetto)
-
+-> verificare css online -> perfetto
+-> verificare html online -> da fare
 
 https://github.com/Andryd22/Teatro.git
+
+
+
+<!-- ./styles/visualizza.css
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+-->
