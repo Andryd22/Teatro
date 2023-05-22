@@ -1,12 +1,8 @@
-da implementare:
-	- visualizzazioni di uno spettacolo
-	- bug session root (
-							dopo essermi loggato con root,
-							se esco e rientro accedo agli eventi con root@gmail.com
-						) -> index.html
-bug scritti su whatsapp
+bug:
+	- bug indirizzamento root@gmail.com
+	- prima volta dislike -> messo like
 
-rimuovere parti commentate di vecchio css.
+rimuovere parti commentate di vecchio css -> fatto (mi pare)
 
 -> verificare css online -> perfetto
 -> verificare html online -> da fare
