@@ -43,21 +43,28 @@
         */
         
         if($procedere->num_rows!=0){
+           
             if(isset($_GET["addLike"]) && $_GET["addLike"] == 1) {
-                $query3="UPDATE interazionecittadinoevento SET click=1 WHERE codice_evento=" . $_SESSION["disponibilita"] ." AND codice_cittadino='$id[0]'"; //WHERE codice_evento=" . $_SESSION["disponibilita"];
+                $query3="UPDATE interazionecittadinoevento SET click=1 WHERE codice_evento=" . $_SESSION["disponibilita"] ." AND codice_cittadino='$id[0]'"; 
                 $result3=mysqli_query($connessionesql,$query3);  
             }
 
             if(isset($_GET["addDislike"]) && $_GET["addDislike"] == 1) {
-                $query3="UPDATE interazionecittadinoevento SET click=0 WHERE codice_evento=" . $_SESSION["disponibilita"] ." AND codice_cittadino='$id[0]'"; //WHERE codice_evento=" . $_SESSION["disponibilita"];
+                $query3="UPDATE interazionecittadinoevento SET click=0 WHERE codice_evento=" . $_SESSION["disponibilita"] ." AND codice_cittadino='$id[0]'"; 
                 $result3=mysqli_query($connessionesql,$query3); 
             }
 
         }
         else {
+
+            if(isset($_GET["addLike"]) && $_GET["addLike"] == 1) {
+                $inserimento="  INSERT INTO interazionecittadinoevento(codice_cittadino, codice_evento, click) VALUES ('$id[0]', '{$_SESSION['disponibilita']}', 1)";
+            }
             
-            $inserimento="  INSERT INTO interazionecittadinoevento(codice_cittadino, codice_evento, click) 
-                            VALUES ('$id[0]', '{$_SESSION['disponibilita']}', 1)";
+            if(isset($_GET["addDislike"]) && $_GET["addDislike"] == 1) {
+                $inserimento="  INSERT INTO interazionecittadinoevento(codice_cittadino, codice_evento, click) VALUES ('$id[0]', '{$_SESSION['disponibilita']}', 0)";
+            }
+            
             $result=mysqli_query($connessionesql,$inserimento);
         }
     }
@@ -84,7 +91,7 @@
 
 <body>   
 <nav class="navbar navbar-expand-md">
-        <a class="navbar-brand" href="index.html"><img src=" ./img/logo.png" /></a>
+        <a class="navbar-brand" href="index.html"><img alt="Teatro di Firenze" src="./img/logo.png"></a>
        
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             
@@ -124,7 +131,7 @@
         $_SESSION["disponibilita"] = $disponibilita;
     ?>
 
-    <video width="100%" controls>
+    <video controls>
       <source src="<?php echo $path_to_video; ?>">
     </video>
       
@@ -141,10 +148,10 @@
     
     <nav class="navbar navbar-expand-md">
         <div class="row">
-            <input type="hidden" id="incrementaQuale" name="incrementaQuale">
+            <input type="hidden" id="incrementaQuale1" name="incrementaQuale">
                 <button class="nav-button" onclick="incrementaValori(1);"> Like: <?php echo $likes[0] ?></button>
 
-            <input type="hidden" id="incrementaQuale" name="incrementaQuale">
+            <input type="hidden" id="incrementaQuale2" name="incrementaQuale">
                 <button class="nav-button" onclick="incrementaValori(-1);"> Dislike: <?php echo $dislike[0] ?></button>
         </div>
     </nav>
@@ -176,7 +183,7 @@
     <div class="container center__display">
         <div class="top">
          
-            <form action="./visualizza.php" method="post" id="visualizza" class="form-horizontal text-center" role="form">
+            <form action="./visualizza.php" method="post" id="visualizza" class="form-horizontal text-center" >
 
                 <div class="form__info center__display">
                     <div class="row">

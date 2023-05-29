@@ -27,7 +27,7 @@
 <body>
 
 <nav class="navbar navbar-expand-md">
-        <a class="navbar-brand" href="index.html"><img src=" ./img/logo.png" /></a>
+        <a class="navbar-brand" href="index.html"><img alt="Teatro di Firenze" src="./img/logo.png"></a>
        
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             
@@ -53,8 +53,8 @@
     <div class="container">
         <div class="row">
             <div class="box-largo ">
-                <div id="board " class="box-largo">
-                    <form action="upload.php" method="post" id="register" class="form-horizontal text-center" role="form" enctype="multipart/form-data">
+                <div  class="box-largo">
+                    <form action="upload.php" method="post" id="register" class="form-horizontal text-center"  enctype="multipart/form-data">
                         
                         <br>
 
@@ -69,7 +69,7 @@
                                 <input type="text" name="nome" class="form-control " placeholder="Nome evento" required>
                             </div>
                             <div class="col-md-6 col-md-offset-0">
-                                <input type="date" name="data_evento" class="form-control" placeholder="Data Evento" required>
+                                <input type="date" name="data_evento" class="form-control" required>
                             </div>
                         </div>
                         <div class="row">

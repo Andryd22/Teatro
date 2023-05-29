@@ -56,7 +56,7 @@
 
 <body>
     <nav class="navbar navbar-expand-md">
-        <a class="navbar-brand" href="index.html"><img src=" ./img/logo.png" /></a>
+        <a class="navbar-brand" href="index.html"><img alt="Teatro di Firenze" src="./img/logo.png"></a>
        
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             
@@ -77,8 +77,8 @@
     <div class="container">
         <div class="row">
             <div class="box-largo ">
-                <div id="board " class="box-largo">
-                    <form action="./admin.php" method="post" class="form-horizontal text-center" role="form">
+                <div  class="box-largo">
+                    <form action="./admin.php" method="post" class="form-horizontal text-center" >
                         <h1>
                             Inserimento
                         </h1>
@@ -91,7 +91,7 @@
                             <br> 
 
                             <?php
-                            if($ok==1) echo "Spettacolo inserito correttamente nel database"; //in: " . __DIR__ . "/video/" . $_FILES["file"]["name"];
+                            if($ok==1) echo "Spettacolo inserito correttamente nel database"; 
                             if($ok==0) echo $_FILES["file"]["name"] . " esiste già in questa data";  
                             ?>
 

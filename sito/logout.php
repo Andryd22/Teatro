@@ -23,7 +23,7 @@
 
 <body>
 <nav class="navbar navbar-expand-md">
-        <a class="navbar-brand" href="index.html"><img src=" ./img/logo.png" /></a>
+        <a class="navbar-brand" href="index.html"><img alt="Teatro di Firenze" src="./img/logo.png"></a>
        
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             
@@ -43,8 +43,8 @@
     <div class="container">
         <div class="row">
             <div class="box-largo ">
-                <div id="board " class="box-largo">
-                    <form action="./index.html" method="post" id="register" class="form-horizontal text-center" role="form">
+                <div  class="box-largo">
+                    <form action="./index.html" method="post" id="register" class="form-horizontal text-center" >
                         <h1>
                             Logout Effettuato
                         </h1>

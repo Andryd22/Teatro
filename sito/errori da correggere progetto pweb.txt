@@ -1,11 +1,12 @@
 bug:
 	- bug indirizzamento root@gmail.com
-	- prima volta dislike -> messo like
 
-rimuovere parti commentate di vecchio css -> fatto (mi pare)
+da fare:
+    - semplificare codice
+    - verificare css online -> perfetto
+    - verificare html online -> scelta -> 1 err
 
--> verificare css online -> perfetto
--> verificare html online -> da fare
+
 
 https://github.com/Andryd22/Teatro.git
 

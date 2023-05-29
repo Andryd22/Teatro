@@ -271,12 +271,12 @@ p {
 
 /* terza section */
 
-section.prossimi { /* anche per settima section */
+section.prossimi {  
     position: relative;
     padding: 50px 0;
 }
 
-.prossimi-spettacoli { /* anche per settima section */
+.prossimi-spettacoli { 
     background: linear-gradient(90deg, rgba(64, 26, 130, 1) 0%, rgba(201, 0, 135, 1) 100%);
 }
 
@@ -309,7 +309,7 @@ section.prossimi p {
 
 /* quarta-quinta-sesta section */
 
-.align-items-center { /* anche per settima section */
+.align-items-center { 
     align-items: center!important;
 }
 
@@ -317,7 +317,7 @@ section.prossimi p {
     order: 2;
 }
 
-.col-lg-6 { /* anche per settima section */
+.col-lg-6 { 
     flex: 0 0 50%;
     max-width: 50%;
     position: relative;
@@ -327,7 +327,7 @@ section.prossimi p {
     padding-left: 15px;
 }
 
-.p-5 { /* anche per settima section */
+.p-5 { 
     padding: 3rem!important;
 }
 

@@ -1,6 +1,5 @@
 <?php	
 
-
     if(isset($_REQUEST["email"])){
 		
 		// Connessione al db
