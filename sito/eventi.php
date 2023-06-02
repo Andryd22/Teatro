@@ -26,7 +26,7 @@
     <nav class="navbar navbar-expand-md">
         <a class="navbar-brand" href="index.html"><img alt="Teatro di Firenze" src="./img/logo.png"></a>
        
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <div class="collapse navbar-collapse">
             
             <a class="nav-button" href="./index.html"> Home</a>
 

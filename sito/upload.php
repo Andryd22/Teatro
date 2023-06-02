@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,12 +30,10 @@
     $result2=mysqli_query($connessionesql,$query2);
     
     //controllo se result2 è vuoto o ha un result
-    $num=mysqli_num_rows($result2);
-
-    if ($num!=0)  $giapresentenellastessadata=1;
+    if ($result2->num_rows!=0)  $giapresentenellastessadata=1;
     else $giapresentenellastessadata=0;
    
-    $ok=-1; //var per stampare inserimento
+    $ok=-1; //var per inserimento
 
     // file già presente stessa data 
     if (file_exists(__DIR__ . "/video/" . $_FILES["file"]["name"]) && $giapresentenellastessadata==1 ){ 
@@ -56,12 +54,10 @@
 
 <body>
     <nav class="navbar navbar-expand-md">
-        <a class="navbar-brand" href="index.html"><img alt="Teatro di Firenze" src="./img/logo.png"></a>
+        <a class="navbar-brand"><img alt="Teatro di Firenze" src="./img/logo.png"></a>
        
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <div class="collapse navbar-collapse">
             
-            <a class="nav-button" href="./index.html"> Home</a>
-
             <a class="nav-button right" href="admin.php">Admin</a>
 
         </div>
@@ -69,8 +65,8 @@
     
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Admin</li>
+            <li class="breadcrumb-item active">Home</li>
+            <li class="breadcrumb-item active">Admin</li>
         </ol>
     </nav>  
 

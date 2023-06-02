@@ -1,13 +1,15 @@
-bug:
-	- bug indirizzamento root@gmail.com
-
 da fare:
     - semplificare codice
     - verificare css online -> perfetto
     - verificare html online -> scelta -> 1 err
+    - come funziona riga 49 upload.php
 
-
-
+chiedere:
+    1. le password degli account predefiniti del mio db dovrei scriverle da qualche parte?
+    2. (solo a scopo informativo) quella cosa che viene fuori quando ispezioni il file alla fine sono chiamate che ti fa google di default per il font. secondo te dovrei dirglielo scrivendolo da qualche parte?
+    3. che vuol dire la seguente foto?
+    4. come è l'orale sul progetto?
+    
 https://github.com/Andryd22/Teatro.git
 
 

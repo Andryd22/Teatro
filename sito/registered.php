@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,7 +17,7 @@
     <nav class="navbar navbar-expand-md">
         <a class="navbar-brand" href="index.html"><img alt="Teatro di Firenze" src="./img/logo.png"></a>
        
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <div class="collapse navbar-collapse">
             
             <a class="nav-button" href="./index.html"> Home</a>
 

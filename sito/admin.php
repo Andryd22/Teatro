@@ -27,12 +27,10 @@
 <body>
 
 <nav class="navbar navbar-expand-md">
-        <a class="navbar-brand" href="index.html"><img alt="Teatro di Firenze" src="./img/logo.png"></a>
+        <a class="navbar-brand"><img alt="Teatro di Firenze" src="./img/logo.png"></a>
        
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <div class="collapse navbar-collapse">
             
-            <a class="nav-button" href="./index.html"> Home</a>
-
             <a class="loggato spostare">
                 <?php
                     echo "Logged as " . $_SESSION['user'] . "";
@@ -46,8 +44,8 @@
     
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Inserimento Evento</li>
+            <li class="breadcrumb-item active">Home</li>
+            <li class="breadcrumb-item active">Inserimento Evento</li>
         </ol>
     </nav>
     <div class="container">
