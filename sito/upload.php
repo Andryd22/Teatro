@@ -3,14 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
     <link rel="icon" href="img/favicon.png">
-
     <title>Insert Effettuato</title>
-
     <link rel="stylesheet" href="styles/registered-logout-upload.css" type="text/css">
-
 </head>
 
 <?php   
@@ -53,52 +48,42 @@
 ?>
 
 <body>
-    <nav class="navbar navbar-expand-md">
-        <a class="navbar-brand"><img alt="Teatro di Firenze" src="./img/logo.png"></a>
-       
-        <div class="collapse navbar-collapse">
-            
-            <a class="nav-button right" href="admin.php">Admin</a>
-
+    <nav class="navbar">
+        <a class="navbar-alta"><img alt="Teatro di Firenze" src="./img/logo.png"></a>
+        <div class="navbar-collapse">
+            <a class="navbar-button right" href="admin.php">Admin</a>
         </div>
     </nav>
     
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item active">Home</li>
-            <li class="breadcrumb-item active">Admin</li>
+    <nav aria-label="barretta-nera">
+        <ol class="barretta-nera">
+            <li class="barretta-nera-item active">Home</li>
+            <li class="barretta-nera-item active">Admin</li>
         </ol>
     </nav>  
 
     <div class="container">
         <div class="row">
             <div class="box-largo ">
-                <div  class="box-largo">
-                    <form action="./admin.php" method="post" class="form-horizontal text-center" >
+                <div class="box-largo">
+                    <form action="./admin.php" method="post" class="testo-centrato" >
                         <h1>
                             Inserimento
                         </h1>
                       
                         <div class="form-group ">
                         
-                            <br>                           
-                            <br>            
-                            <br>    
-                            <br> 
+                            <br><br><br><br> 
 
                             <?php
                             if($ok==1) echo "Spettacolo inserito correttamente nel database"; 
                             if($ok==0) echo $_FILES["file"]["name"] . " esiste già in questa data";  
                             ?>
 
-                            <br>                           
-                            <br>            
-                            <br>    
-                            <br>     
-                            <br>                                            
+                            <br><br><br><br><br>                                           
 
                             <div class="form-group">
-                                <button type="submit" class="button contact-submit">Torna alla sezione Admin</button>
+                                <button type="submit" class="button invia-form">Torna alla sezione Admin</button>
                             </div>
 
                         </div>
@@ -111,7 +96,7 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 h-100 text-center text-lg-left my-auto">
+                <div class="colonne12 testo-centrato">              
                     <p class="small">Andrea Doni &copy; 2023. All Rights Reserved.</p>
                 </div>
             </div>

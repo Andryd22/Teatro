@@ -1,22 +1,11 @@
 da fare:
-    - semplificare codice
-    - verificare css online -> perfetto
-    - verificare html online -> scelta -> 1 err
     - come funziona riga 49 upload.php
 
-chiedere:
-    1. le password degli account predefiniti del mio db dovrei scriverle da qualche parte?
-    2. (solo a scopo informativo) quella cosa che viene fuori quando ispezioni il file alla fine sono chiamate che ti fa google di default per il font. secondo te dovrei dirglielo scrivendolo da qualche parte?
-    3. che vuol dire la seguente foto?
-    4. come è l'orale sul progetto?
+bug:
+    - logged as email posizionato male
     
-https://github.com/Andryd22/Teatro.git
+css:
+    - admin.css 3 warning
 
-
-
-<!-- ./styles/visualizza.css
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
--->
+html:
+    - scelta.php 1 error

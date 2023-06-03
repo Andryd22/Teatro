@@ -3,8 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        
     <link rel="icon" href="img/favicon.png">
 
     <title>Registrazione Online</title>
@@ -22,48 +21,38 @@
 ?>
 
 <body>
-<nav class="navbar navbar-expand-md">
-        <a class="navbar-brand" href="index.html"><img alt="Teatro di Firenze" src="./img/logo.png"></a>
-       
-        <div class="collapse navbar-collapse">
-            
-            <a class="nav-button" href="./index.html"> Home</a>
-
-            <a class="nav-button right" href="register.php"> Registrati</a>
+<nav class="navbar">
+        <a class="navbar-alta" href="index.html"><img alt="Teatro di Firenze" src="./img/logo.png"></a>
+        <div class="navbar-collapse">
+            <a class="navbar-button" href="./index.html"> Home</a>
+            <a class="navbar-button right" href="register.php"> Registrati</a>
         </div>
     </nav>
     
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Eventi</li>
-        </ol>
-    </nav>  
+    <ol class="barretta-nera">
+        <li class="barretta-nera-item">Home / </li>
+        <li class="barretta-nera-item">Logout</li>
+    </ol>  
 
     <div class="container">
         <div class="row">
             <div class="box-largo ">
                 <div  class="box-largo">
-                    <form action="./index.html" method="post" id="register" class="form-horizontal text-center" >
+                    <form action="./index.html" method="post" id="register" class="testo-centrato" >
                         <h1>
                             Logout Effettuato
                         </h1>
                       
                         <div class="form-group ">
                         
-                            <br>                           
-                            <br>            
-                            <br>    
-                            <br>     
+                            <br><br><br><br>   
+
                             Grazie per aver utilizzato il nostro servizio
-                            <br>                           
-                            <br>            
-                            <br>    
-                            <br>     
-                            <br>                                            
+                            
+                            <br><br><br><br><br>                                           
 
                             <div class="form-group">
-                                <button type="submit" class="button contact-submit">Torna a Home Page</button>
+                                <button type="submit" class="button invia-form">Torna a Home Page</button>
                             </div>
 
                         </div>
@@ -76,7 +65,7 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 h-100 text-center text-lg-left my-auto">
+                <div class="colonne12 testo-centrato">              
                     <p class="small">Andrea Doni &copy; 2023. All Rights Reserved.</p>
                 </div>
             </div>

@@ -1,0 +1,12 @@
+email:
+root@gmail.com
+mariorossi@gmail.com
+luigiverdi@gmail.com
+carloneri@gmail.com
+
+
+password:
+root
+MarioR1!
+LuigiV2!
+CarloN3!

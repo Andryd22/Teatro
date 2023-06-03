@@ -2,11 +2,8 @@
 <html lang="it">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
     <link rel="icon" href="img/favicon.png">
-
     <title>Scelta</title>
     <link rel="stylesheet" href="./styles/scelta.css" type="text/css">
     
@@ -25,35 +22,29 @@
  ?>   
 
 <body>
-    <nav class="navbar navbar-expand-md">
-        <a class="navbar-brand" href="index.html"><img alt="Teatro di Firenze" src="./img/logo.png"></a>
-       
-        <div class="collapse navbar-collapse">
-            
-            <a class="nav-button" href="./index.html"> Home</a>
-
+    <nav class="navbar">
+        <a class="navbar-alta" href="index.html"><img alt="Teatro di Firenze" src="./img/logo.png"></a>
+        <div class="navbar-collapse">
+            <a class="navbar-button" href="./index.html"> Home</a>
             <a class="loggato spostare">
                 <?php
                     echo "Logged as " . $_SESSION['user'] . "";
                 ?>  
             </a>
-            
-            <a class="nav-button right" href="logout.php">Logout</a>
+            <a class="navbar-button right" href="logout.php">Logout</a>
         </div>
     </nav>
     
+    <ol class="barretta-nera">
+        <li class="barretta-nera-item">Home / </li>
+        <li class="barretta-nera-item">Scelta</li>
+    </ol>
     
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Scelta</li>
-        </ol>
-    </nav>
     <div class="container">
         <div class="row">
             <div class="box-largo ">
                 <div  class="box-largo">
-                    <form action="<?php echo "./visualizza.php" ?>" method="post" id="register" class="form-horizontal text-center" >
+                    <form action="<?php echo "./visualizza.php" ?>" method="post" id="register" class="testo-centrato" >
                         <h1>
                             Scegliere l'Evento
                         </h1>  
@@ -65,7 +56,7 @@
                             <br>
                             <div class="row">
                                 <div class="centra">
-                                     <select name="disponibilita" id="disponibilita" class="form-control" required="required">
+                                     <select name="disponibilita" id="disponibilita" class="input-del-form" required="required">
 
                                         <?php
                                             require __DIR__ .  "/php/connessione.php";
@@ -83,16 +74,11 @@
                                     </select>
                                 </div>                               
                             </div>
-                            
-                          
-
-                            <br>    
-                            <br>     
-                            
-                            <br>                                            
+        
+                            <br><br><br>                                            
 
                             <div class="form-group">
-                                <button type="submit" class="button contact-submit"><?php echo "Conferma" ?></button>
+                                <button type="submit" class="button invia-form"><?php echo "Conferma" ?></button>
                             </div>
 
                         </div>
@@ -105,7 +91,7 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+                <div class="colonne12 testo-centrato">              
                     <p class="small">Andrea Doni &copy; 2023. All Rights Reserved.</p>
                 </div>
             </div>

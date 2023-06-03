@@ -2,15 +2,10 @@
 <html lang="it">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">     
     <link rel="icon" href="img/favicon.png">
-
     <title>Visualizza</title>
     <link rel="stylesheet" href="./styles/visualizza.css" type="text/css">
-
-    
 </head>
 
 <?php
@@ -90,29 +85,23 @@
 ?>   
 
 <body>   
-<nav class="navbar navbar-expand-md">
-        <a class="navbar-brand" href="index.html"><img alt="Teatro di Firenze" src="./img/logo.png"></a>
-       
-        <div class="collapse navbar-collapse">
-            
-            <a class="nav-button" href="./index.html"> Home</a>
-
+<nav class="navbar">
+        <a class="navbar-alta" href="index.html"><img alt="Teatro di Firenze" src="./img/logo.png"></a>
+        <div class="navbar-collapse">
+            <a class="navbar-button" href="./index.html"> Home</a>
             <a class="loggato spostare">
                 <?php
                     echo "Logged as " . $_SESSION['user'] . "";
                 ?>  
             </a>
-            
-            <a class="nav-button right" href="logout.php">Logout</a>
+            <a class="navbar-button right" href="logout.php">Logout</a>
         </div>
     </nav>
     
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Visualizza</li>
-        </ol>
-    </nav>
+    <ol class="barretta-nera">
+        <li class="barretta-nera-item">Home / </li>
+        <li class="barretta-nera-item">Visualizza</li>
+    </ol>
 
     <?php
         $disponibilita=-1;
@@ -146,13 +135,13 @@
         
     ?>
     
-    <nav class="navbar navbar-expand-md">
+    <nav class="navbar">
         <div class="row">
             <input type="hidden" id="incrementaQuale1" name="incrementaQuale">
-                <button class="nav-button" onclick="incrementaValori(1);"> Like: <?php echo $likes[0] ?></button>
+                <button class="navbar-button" onclick="incrementaValori(1);"> Like: <?php echo $likes[0] ?></button>
 
             <input type="hidden" id="incrementaQuale2" name="incrementaQuale">
-                <button class="nav-button" onclick="incrementaValori(-1);"> Dislike: <?php echo $dislike[0] ?></button>
+                <button class="navbar-button" onclick="incrementaValori(-1);"> Dislike: <?php echo $dislike[0] ?></button>
         </div>
     </nav>
 
@@ -183,19 +172,17 @@
     <div class="container center__display">
         <div class="top">
          
-            <form action="./visualizza.php" method="post" id="visualizza" class="form-horizontal text-center" >
-
+            <form action="./visualizza.php" method="post" id="visualizza" class="testo-centrato">
                 <div class="form__info center__display">
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="colonne12">
 
                             <input type="hidden" id="disponibilita" name="disponibilita" value="<?php echo $disponibilita; ?>"> 
-
                             <input type="text" name="commento" id="commento" placeholder="Inserisci un commento">
-                            <button type="submit" class="button contact-submit">Commenta</button>                                                              
+                            <button type="submit" class="button invia-form">Commenta</button>                                                              
                       
                         </div>                                  
-                        <div class="col-lg-6-2">
+                        <div class="colonne12-2">
 
                             <br>
                             <div class="row2">COMMENTI PRECEDENTI</div>
@@ -214,11 +201,11 @@
                                     echo "<div class=\"row2\">" . $mail_utente .  " -> "  . $commento_utente . "</div> <br>";
                                 }
                         
-                            ?>                           
+                            ?>
+
                         </div>  
                     </div>                  
                 </div>
-                
             </form>
         </div>
     </div>
