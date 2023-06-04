@@ -13,7 +13,7 @@
 		$pwd2=addslashes($_REQUEST['password2']);
 
 		if ($pwd != $pwd2) {					
-			$salto='Location: /register.php?esito=' . $esito;
+			$salto='Location: register.php?esito=0';
 			header($salto, true, 303);
 			die();
 		}	

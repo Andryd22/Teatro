@@ -1,6 +1,6 @@
-function verificaPassword() {
+function verificaPassword(thispwd) {
 
-    var pwd = this.password;
+    var pwd = thispwd;
 
     var minuscolo = document.getElementById("minuscolo");
     var maiuscolo = document.getElementById("maiuscolo");
@@ -77,7 +77,7 @@ function verificaCampi() {
         ok = false;
     }
 
-    if (verificaPassword()) {
+    if (verificaPassword(campopwd1)) {
         ok = false;    
     }
 

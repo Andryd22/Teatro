@@ -17,7 +17,7 @@
             <a class="navbar-button right" href="./eventi.php"> Accedi agli Eventi</a>
         </div>
     </nav>
-    
+
     <ol class="barretta-nera">
         <li class="barretta-nera-item">Home / </li>
         <li class="barretta-nera-item">Registrati</li>
