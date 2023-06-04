@@ -68,7 +68,7 @@
                             </div>
                             <div class="colonne12 ">
                                 <input type="file" name="file" class="input-del-form" accept=".mp4" id="file" required>
-                                <p class="gradient"><?php echo "Seleziona il file in formato .mp4 che vuoi inserire nel database"; ?></p>
+                                <p class="colorato"><?php echo "Seleziona il file in formato .mp4 che vuoi inserire nel database"; ?></p>
                             </div>
                         </div>
                  
